@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIPickupBanana : MonoBehaviour
 {
-    private Text textComponent;
+    [SerializeField]private Text textComponent;
     private PlayerState playerState;
 
 

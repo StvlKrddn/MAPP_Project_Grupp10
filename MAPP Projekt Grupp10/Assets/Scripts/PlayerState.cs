@@ -8,6 +8,7 @@ public class PlayerState : MonoBehaviour
 
     [SerializeField] private int maxHealth = 4;
     [SerializeField] private int currentHealth = 4;
+
     [SerializeField] private Image firstHealthPoint;
     [SerializeField] private Image secondHealthPoint;
     [SerializeField] private Image thirdHealthPoint;
@@ -15,6 +16,13 @@ public class PlayerState : MonoBehaviour
 
     [SerializeField] private int bananasCollected = 0;
 
+    [SerializeField] private int amountOfRocksAvailable = 0;
+    [SerializeField] private int maxAmountOfRocksAvailable = 3;
+
+    [SerializeField] private bool isFading = false;
+    private Color color;
+
+    private float timer = 2.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +33,18 @@ public class PlayerState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
 
+        if (isFading == true)
+        {
+            color = gameObject.GetComponent<SpriteRenderer>().color;
+            if (color.a > 0)
+            {
+                color.a = color.a - 0.05f;
+                gameObject.GetComponent<SpriteRenderer>().color = color;
+            }
+
+        }
 
     }
 
@@ -126,5 +145,51 @@ public class PlayerState : MonoBehaviour
     public int getMaxHealth()
     {
         return maxHealth;
+    }
+
+    public int getAmountOfRocksAvailable()
+    {
+        return amountOfRocksAvailable;
+    }
+
+    public int getMaxAmountOfRocksAvailable()
+    {
+        return maxAmountOfRocksAvailable;
+    }
+
+    public void pickupRock()
+    {
+        if (amountOfRocksAvailable < maxAmountOfRocksAvailable)
+        {
+            amountOfRocksAvailable++;
+        }
+    }
+
+    public void throwRock()
+    {
+        amountOfRocksAvailable--;
+    }
+
+    public bool isRockAvailable()
+    {
+        if (amountOfRocksAvailable < 0)
+        {
+            return true;
+        }
+        else return false;
+    }
+
+    private void invinciblePlayer()
+    {
+        timer = 0;
+
+        while (timer < 2)
+        {
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            while (timer > 1) { }
+        }
+
+        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+
     }
 }

@@ -123,8 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &650635723
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,7 +640,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> origin/Martin
 --- !u!1 &1260499772
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,8 +723,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &1321332135
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,4 +1222,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145718969}
   m_CullTransparentMesh: 1
->>>>>>> origin/Martin

@@ -164,7 +164,7 @@ public class PlayerState : MonoBehaviour
 
     public bool isRockAvailable()
     {
-        if (amountOfRocksAvailable < 0)
+        if (amountOfRocksAvailable > 0)
         {
             return true;
         }
@@ -194,6 +194,7 @@ public class PlayerState : MonoBehaviour
             isFadingBack = true;
             isFading = false;
         }
+
 
         if (isFadingBack == true)
         {

@@ -119,9 +119,9 @@ public class PlayerState : MonoBehaviour
 
     }
 
-    public void pickupBanana()
+    public void pickupBanana(int bananaAmount)
     {
-        bananasCollected++;
+        bananasCollected = bananasCollected + bananaAmount;
     }
 
     public int getBanana()

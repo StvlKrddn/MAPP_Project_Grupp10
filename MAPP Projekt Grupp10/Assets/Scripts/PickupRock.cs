@@ -7,6 +7,14 @@ public class PickupRock : MonoBehaviour
     private bool canPickUpRock = true;
     private PlayerState playerState;
 
+    [SerializeField] private AudioClip playerRockPickupClip;
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = gameObject.GetComponent<AudioSource>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") == true && canPickUpRock == true)
@@ -16,7 +24,8 @@ public class PickupRock : MonoBehaviour
             {
                 playerState.pickupRock();
                 canPickUpRock = false;
-                Destroy(gameObject);
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                audioSource.PlayOneShot(playerRockPickupClip);
             }
 
         }

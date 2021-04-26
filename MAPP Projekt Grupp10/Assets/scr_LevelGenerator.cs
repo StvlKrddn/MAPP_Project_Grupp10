@@ -40,12 +40,15 @@ public class scr_LevelGenerator : MonoBehaviour
 
     private void addLevelPart(Transform prefab, Vector3 position)
     {
+        print("händer detta eller ej");
         Transform temp = prefab.Find("StartPoint");
 
         float test = prefab.position.x - temp.position.x;
 
-        Instantiate(prefab, new Vector3(position.x + test, position.y), Quaternion.identity);
+        Transform current = Instantiate(prefab, new Vector3(position.x + test, position.y), Quaternion.identity);
 
-        previousEndPoint = prefab.Find("EndPoint").position;
+        previousEndPoint = current.Find("EndPoint").position;
+
+        current.Find("SelfDestruct").GetComponent<scr_SelfDestruct>().player = player;
     }
 }

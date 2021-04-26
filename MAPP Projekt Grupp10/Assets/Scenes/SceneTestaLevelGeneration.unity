@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1018373846}
+    - target: {fileID: 3988037054433487330, guid: aa860efb33dec414cac7d36bdd4521e2, type: 3}
+      propertyPath: offsetY
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3988037054433487331, guid: aa860efb33dec414cac7d36bdd4521e2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -263,7 +267,7 @@ PrefabInstance:
       objectReference: {fileID: 5940392215151315181, guid: 4ba2192e6807e0441a6ae8b7206e9cb3, type: 3}
     - target: {fileID: -7276131020434160687, guid: 21039a67e2025814ba04129752568e53, type: 3}
       propertyPath: distanceBeforeSpawning
-      value: 5
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -7276131020434160687, guid: 21039a67e2025814ba04129752568e53, type: 3}
       propertyPath: levelPartTest.Array.size

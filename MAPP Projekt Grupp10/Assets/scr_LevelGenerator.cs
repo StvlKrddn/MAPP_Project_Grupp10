@@ -13,7 +13,19 @@ public class scr_LevelGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Transform levelToSpawn = levelPartsList[Random.Range(0, levelPartsList.Count)];
+
+        Transform temp = levelToSpawn.Find("StartPoint");
+
+        float test = levelToSpawn.position.x - temp.position.x;
+
+        print(test + "Hur stor är distansen");
+
+        Transform hej = Instantiate(levelToSpawn, new Vector3(player.transform.position.x + test - 1, player.transform.position.y -3),Quaternion.identity);
+
+        previousEndPoint = hej.Find("EndPoint").transform.position;
+
+        print(previousEndPoint.x + "Var är endpointen");
     }
 
     // Update is called once per frame
@@ -28,10 +40,12 @@ public class scr_LevelGenerator : MonoBehaviour
 
     private void addLevelPart(Transform prefab, Vector3 position)
     {
-        Transform temp = prefab.Find("StartPosition");
+        Transform temp = prefab.Find("StartPoint");
 
-        Instantiate(prefab, position, Quaternion.identity);
+        float test = prefab.position.x - temp.position.x;
 
-        previousEndPoint = prefab.Find("EndPosition").position;
+        Instantiate(prefab, new Vector3(position.x + test, position.y), Quaternion.identity);
+
+        previousEndPoint = prefab.Find("EndPoint").position;
     }
 }

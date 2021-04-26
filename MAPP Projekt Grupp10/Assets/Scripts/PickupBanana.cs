@@ -9,7 +9,7 @@ public class PickupBanana : MonoBehaviour
     [SerializeField] private AudioClip playerBananaPickupClip;
     private AudioSource audioSource;
 
-    [SerializeField] private int bananaAmount;
+    [SerializeField] private int bananaAmount = 1;
 
     private void Start()
     {

@@ -19,33 +19,25 @@ public class PlayerState : MonoBehaviour
     [SerializeField] private int amountOfRocksAvailable = 0;
     [SerializeField] private int maxAmountOfRocksAvailable = 3;
 
-    [SerializeField] private bool isFading = false;
-    private Color color;
+    private bool isFading = false;
+    private bool isFadingBack = false;
 
-    private float timer = 2.0f;
+    private Color color;
+    private Color originalColor;
+
 
     // Start is called before the first frame update
     void Start()
     {
         resetHp();
+        originalColor = gameObject.GetComponent<SpriteRenderer>().color;
     }
 
     // Update is called once per frame
-    void Update()
+
+    private void FixedUpdate()
     {
-        timer += Time.deltaTime;
-
-        if (isFading == true)
-        {
-            color = gameObject.GetComponent<SpriteRenderer>().color;
-            if (color.a > 0)
-            {
-                color.a = color.a - 0.05f;
-                gameObject.GetComponent<SpriteRenderer>().color = color;
-            }
-
-        }
-
+        checkForFade();
     }
 
     public void damagePlayer(int damage)
@@ -179,17 +171,44 @@ public class PlayerState : MonoBehaviour
         else return false;
     }
 
-    private void invinciblePlayer()
+    public void invinciblePlayer()
     {
-        timer = 0;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        isFading = true;
+    }
 
-        while (timer < 2)
+    private void checkForFade()
+    {
+        if (isFading == true)
         {
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            while (timer > 1) { }
+            color = gameObject.GetComponent<SpriteRenderer>().color;
+            if (color.a > 0.3)
+            {
+                color.a = color.a - 0.03f;
+                gameObject.GetComponent<SpriteRenderer>().color = color;
+            }
         }
 
-        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        if (color.a < 0.3)
+        {
+            isFadingBack = true;
+            isFading = false;
+        }
 
+        if (isFadingBack == true)
+        {
+            color = gameObject.GetComponent<SpriteRenderer>().color;
+            if (color.a < 1)
+            {
+                color.a = color.a + 0.03f;
+                gameObject.GetComponent<SpriteRenderer>().color = color;
+            }
+            else if (color.a >= 1)
+            {
+                gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                isFadingBack = false;
+            }
+        }
     }
+
 }

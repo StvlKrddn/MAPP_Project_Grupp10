@@ -9,6 +9,8 @@ public class PickupBanana : MonoBehaviour
     [SerializeField] private AudioClip playerBananaPickupClip;
     private AudioSource audioSource;
 
+    [SerializeField] private int bananaAmount;
+
     private void Start()
     {
         audioSource = gameObject.GetComponent<AudioSource>();
@@ -18,7 +20,7 @@ public class PickupBanana : MonoBehaviour
     {
         if (collision.CompareTag("Player") == true && canPickUpBanana == true)
         {
-            collision.GetComponent<PlayerState>().pickupBanana();
+            collision.GetComponent<PlayerState>().pickupBanana(bananaAmount);
             canPickUpBanana = false;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             audioSource.PlayOneShot(playerBananaPickupClip);

@@ -85,12 +85,20 @@ public class Scr_Movement : MonoBehaviour
 
 
 
-        if (downRay.distance < Mathf.Abs(yChange) && Mathf.Sign(yChange) == -1)
+        if (downRay.distance < Mathf.Abs(yChange) && Mathf.Sign(yChange) == -1 && downRay.collider != null)
         {
             yChange = -downRay.distance;
             isJumping = false;
             grounded = true;
 
+
+            print(downRay.collider);
+
+        }
+
+        if(downRay.collider == null)
+        {
+            grounded = false;
         }
         //     print(downRay.distance + " distansen");
         //     print(yChange);

@@ -3547,3 +3547,4 @@ Received Import Request.
 Start importing Assets/scr_SelfDestruct.cs using Guid(2e344d146c0180149b037ffca622554b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac35a4aa3372f2c385cda77b59c0c039') in 0.011921 seconds
   Import took 0.015341 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -123,3 +123,28 @@ Received Import Request.
 Start importing Assets/Sprites/Meny/Scene1.jpg using Guid(4103c7104fc4bba49beee54d61c6d328) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3357d45998faf5fd7c9891cd92b5f21b') in 0.033491 seconds
   Import took 0.038457 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001797 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.699 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.0 MB.
+System memory in use after: 88.1 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2268.
+Total: 10.900900 ms (FindLiveObjects: 0.526000 ms CreateObjectMapping: 0.178600 ms MarkObjects: 10.155500 ms  DeleteObjects: 0.037600 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

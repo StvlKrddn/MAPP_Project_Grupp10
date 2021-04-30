@@ -19,7 +19,7 @@ public class UIHighScore : MonoBehaviour
 
         else if (PlayerPrefs.GetInt("BananasCollected") > PlayerPrefs.GetInt("HighScore"))
         {
-            text.text = "New High Score : " + PlayerPrefs.GetInt("BananasCollected") + " bananas";
+            text.text = "New High Score: " + PlayerPrefs.GetInt("BananasCollected") + " bananas";
 
             PlayerPrefs.SetInt("HighScore", PlayerPrefs.GetInt("BananasCollected"));
 

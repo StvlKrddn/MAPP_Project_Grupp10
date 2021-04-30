@@ -574,7 +574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 807619030}
-  levelToLoad: 2
+  levelToLoad: 0
 --- !u!1 &933537869
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,7 +722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 933537871}
-  levelToLoad: 2
+  levelToLoad: 0
 --- !u!1 &1024237115
 GameObject:
   m_ObjectHideFlags: 0

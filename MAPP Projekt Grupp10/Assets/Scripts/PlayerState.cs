@@ -27,7 +27,9 @@ public class PlayerState : MonoBehaviour
     private Color originalColor;
 
     [SerializeField] private int levelToLoad = 0;
+    //[SerializeField] private string levelToLoad = "GameOverScene";
 
+    public bool resetPlayerPrefs;
 
 
     // Start is called before the first frame update
@@ -35,6 +37,13 @@ public class PlayerState : MonoBehaviour
     {
         resetHp();
         originalColor = gameObject.GetComponent<SpriteRenderer>().color;
+
+        if (resetPlayerPrefs == true)
+        {
+            PlayerPrefs.SetInt("BananasCollected", 0);
+            PlayerPrefs.SetInt("HighScore", 0);
+        }
+
     }
 
     // Update is called once per frame
@@ -48,7 +57,7 @@ public class PlayerState : MonoBehaviour
     {
         currentHealth = currentHealth - damage;
         updateHealthIcons();
-        if (currentHealth < 0)
+        if (currentHealth < 1)
         {
             gameOver();
         }
@@ -189,7 +198,7 @@ public class PlayerState : MonoBehaviour
             color = gameObject.GetComponent<SpriteRenderer>().color;
             if (color.a > 0.3)
             {
-                color.a = color.a - 0.03f;
+                color.a = color.a - 1.5f * Time.deltaTime;
                 gameObject.GetComponent<SpriteRenderer>().color = color;
             }
         }
@@ -206,7 +215,7 @@ public class PlayerState : MonoBehaviour
             color = gameObject.GetComponent<SpriteRenderer>().color;
             if (color.a < 1)
             {
-                color.a = color.a + 0.03f;
+                color.a = color.a + 1.5f * Time.deltaTime;
                 gameObject.GetComponent<SpriteRenderer>().color = color;
             }
             else if (color.a >= 1)

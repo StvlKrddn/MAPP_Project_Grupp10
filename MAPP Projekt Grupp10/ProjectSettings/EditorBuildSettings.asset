@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/GameOverScene.unity
+    guid: ec270c0f6c364444797bcff22c8f88c0
+  - enabled: 1
+    path: Assets/Scenes/TestingScenes/MartinsRiktigaTestScene.unity
+    guid: 2fea15a5027f98c4abc4c7b7ed148b45
   m_configObjects: {}

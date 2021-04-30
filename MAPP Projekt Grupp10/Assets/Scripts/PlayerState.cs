@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerState : MonoBehaviour
@@ -24,6 +25,9 @@ public class PlayerState : MonoBehaviour
 
     private Color color;
     private Color originalColor;
+
+    [SerializeField] private int levelToLoad = 0;
+
 
 
     // Start is called before the first frame update
@@ -115,8 +119,9 @@ public class PlayerState : MonoBehaviour
 
     private void gameOver()
     {
-        print("Game Over");
 
+        PlayerPrefs.SetInt("BananasCollected", bananasCollected);
+        SceneManager.LoadScene(levelToLoad);
     }
 
     public void pickupBanana(int bananaAmount)

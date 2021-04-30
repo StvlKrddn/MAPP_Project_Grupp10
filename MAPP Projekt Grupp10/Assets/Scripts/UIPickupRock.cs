@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIPickupRock : MonoBehaviour
 {
-    [SerializeField] private Text textComponent;
+    private Text textComponent;
     private PlayerState playerState;
 
 

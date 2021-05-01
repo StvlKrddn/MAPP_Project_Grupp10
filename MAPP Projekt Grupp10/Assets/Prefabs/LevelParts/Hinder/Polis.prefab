@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7263625495908797015}
   - component: {fileID: 3314605869370845531}
   - component: {fileID: 5774181455052240334}
-  - component: {fileID: 4393067542218984088}
   m_Layer: 0
   m_Name: Polis
   m_TagString: Untagged
@@ -212,17 +211,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0.103274465, y: -0.15128589}
   m_Size: {x: 1.5761931, y: 3.2472506}
   m_Direction: 0
---- !u!114 &4393067542218984088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5774181455052240329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 064302d48d689ed41a2e59d084d4ef46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  playerDamageClip: {fileID: 0}

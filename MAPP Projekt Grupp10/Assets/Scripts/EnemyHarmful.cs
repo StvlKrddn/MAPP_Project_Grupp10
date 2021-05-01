@@ -19,7 +19,7 @@ public class EnemyHarmful : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerState>().damagePlayer(damage);
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            gameObject.GetComponent<Collider2D>().enabled = false;
             audioSource.PlayOneShot(playerDamageClip);
         }
     }

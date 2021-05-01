@@ -20,7 +20,7 @@ public class EnemyHarmful : MonoBehaviour
         {
             print("HIT!");
             collision.gameObject.GetComponent<PlayerState>().damagePlayer(damage);
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
             collision.GetComponent<PlayerState>().invinciblePlayer();
             audioSource.PlayOneShot(playerDamageClip);
         }

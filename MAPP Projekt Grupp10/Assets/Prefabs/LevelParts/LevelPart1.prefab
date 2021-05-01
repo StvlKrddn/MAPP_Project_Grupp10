@@ -1,40 +1,45 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!50 &2784831195968989599
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349087871951472769}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1707979189303918421
+--- !u!114 &2474937002021310194
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349087871951472769}
+  m_GameObject: {fileID: 149962441079091231}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 064302d48d689ed41a2e59d084d4ef46, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a13231125f16774e8bcaa50d589ddd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  playerDamageClip: {fileID: 0}
+  playerBananaPickupClip: {fileID: 0}
+  bananaAmount: 1
+--- !u!61 &4850071924433797064
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149962441079091231}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!70 &4363310747032018990
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -51,6 +56,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0.16386604, y: -0.2064848}
   m_Size: {x: 1.9804707, y: 3.0003638}
   m_Direction: 0
+--- !u!114 &1707979189303918421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349087871951472769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 064302d48d689ed41a2e59d084d4ef46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  playerDamageClip: {fileID: 0}
 --- !u!1 &1838609453674463490
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,41 +145,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   parent: {fileID: 5940392215151315180}
---- !u!50 &6320647700005037899
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5923603393810360654}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &7944751559502805919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5923603393810360654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 064302d48d689ed41a2e59d084d4ef46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  playerDamageClip: {fileID: 0}
 --- !u!70 &8120938088927541788
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -177,6 +161,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0.09242964, y: -0.16725647}
   m_Size: {x: 2.0335035, y: 3.1316383}
   m_Direction: 0
+--- !u!114 &7944751559502805919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5923603393810360654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 064302d48d689ed41a2e59d084d4ef46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  playerDamageClip: {fileID: 0}
 --- !u!1 &5940392215151315180
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,9 +249,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5940392215151315181}
     m_Modifications:
+    - target: {fileID: 19244587515174258, guid: e11b74fec1ad89149981e70781785b32, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fbfd3218124e3246a3bf996df2ede56, type: 3}
     - target: {fileID: 19244587515174259, guid: e11b74fec1ad89149981e70781785b32, type: 3}
       propertyPath: m_Name
-      value: placholder (2)
+      value: PickupBanana
       objectReference: {fileID: 0}
     - target: {fileID: 19244587515174261, guid: e11b74fec1ad89149981e70781785b32, type: 3}
       propertyPath: m_RootOrder
@@ -265,7 +267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19244587515174261, guid: e11b74fec1ad89149981e70781785b32, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 19244587515174261, guid: e11b74fec1ad89149981e70781785b32, type: 3}
       propertyPath: m_LocalPosition.z
@@ -301,6 +303,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e11b74fec1ad89149981e70781785b32, type: 3}
+--- !u!1 &149962441079091231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 19244587515174259, guid: e11b74fec1ad89149981e70781785b32, type: 3}
+  m_PrefabInstance: {fileID: 166801214403226988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &149962441079091225 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 19244587515174261, guid: e11b74fec1ad89149981e70781785b32, type: 3}

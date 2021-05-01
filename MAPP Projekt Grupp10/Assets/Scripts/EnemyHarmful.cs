@@ -18,7 +18,6 @@ public class EnemyHarmful : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            print("HIT!");
             collision.gameObject.GetComponent<PlayerState>().damagePlayer(damage);
             gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
             collision.GetComponent<PlayerState>().invinciblePlayer();

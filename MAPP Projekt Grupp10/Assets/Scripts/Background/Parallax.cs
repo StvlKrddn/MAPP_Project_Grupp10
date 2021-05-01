@@ -14,7 +14,7 @@ public class Parallax : MonoBehaviour
         spriteLength = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // Calculate the distance the layer should move relative to the camera
         float distance = camera.transform.position.x * parallaxAmount;

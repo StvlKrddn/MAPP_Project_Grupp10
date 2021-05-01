@@ -92,8 +92,8 @@ Transform:
   - {fileID: 5232359861686529700}
   - {fileID: 5928759065589464716}
   - {fileID: 962175064912336146}
-  - {fileID: 661026022010414723}
   - {fileID: 1204096263455259411}
+  - {fileID: 661026022010414723}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -171,7 +171,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7737071842555648962}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1344564323095812516
 MonoBehaviour:
@@ -198,6 +198,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PickupBanana (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2691664665780527909, guid: 2e8d61e6c3e2ce0429e774cc46bffe92, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8723364
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691664665780527909, guid: 2e8d61e6c3e2ce0429e774cc46bffe92, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8109267
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691664665780527909, guid: 2e8d61e6c3e2ce0429e774cc46bffe92, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.06278634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691664665780527909, guid: 2e8d61e6c3e2ce0429e774cc46bffe92, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.09503019
+      objectReference: {fileID: 0}
     - target: {fileID: 2691664665780527911, guid: 2e8d61e6c3e2ce0429e774cc46bffe92, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -208,7 +224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2691664665780527911, guid: 2e8d61e6c3e2ce0429e774cc46bffe92, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.26
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 2691664665780527911, guid: 2e8d61e6c3e2ce0429e774cc46bffe92, type: 3}
       propertyPath: m_LocalPosition.z
@@ -260,9 +276,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: PickupBanana (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2691664665780527909, guid: 2e8d61e6c3e2ce0429e774cc46bffe92, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8961935
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691664665780527909, guid: 2e8d61e6c3e2ce0429e774cc46bffe92, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8285568
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691664665780527909, guid: 2e8d61e6c3e2ce0429e774cc46bffe92, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.043080807
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691664665780527909, guid: 2e8d61e6c3e2ce0429e774cc46bffe92, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.09992182
+      objectReference: {fileID: 0}
     - target: {fileID: 2691664665780527911, guid: 2e8d61e6c3e2ce0429e774cc46bffe92, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2691664665780527911, guid: 2e8d61e6c3e2ce0429e774cc46bffe92, type: 3}
       propertyPath: m_LocalPosition.x
@@ -270,7 +302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2691664665780527911, guid: 2e8d61e6c3e2ce0429e774cc46bffe92, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.35
+      value: 3.2899997
       objectReference: {fileID: 0}
     - target: {fileID: 2691664665780527911, guid: 2e8d61e6c3e2ce0429e774cc46bffe92, type: 3}
       propertyPath: m_LocalPosition.z

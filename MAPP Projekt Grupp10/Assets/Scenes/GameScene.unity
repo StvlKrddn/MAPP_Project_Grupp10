@@ -3335,7 +3335,7 @@ MonoBehaviour:
   bananasCollected: 0
   amountOfRocksAvailable: 0
   maxAmountOfRocksAvailable: 3
-  levelToLoad: 0
+  levelToLoad: 2
   resetPlayerPrefs: 0
 --- !u!50 &1883352490
 Rigidbody2D:

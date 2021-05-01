@@ -20,7 +20,7 @@ public class scr_SelfDestruct : MonoBehaviour
             if (Vector3.Distance(gameObject.transform.position, player.transform.position) > 300)
             {
                 Destroy(parent);
-                print("har sprängts");
+                //print("har sprängts");
             }
         }
     }

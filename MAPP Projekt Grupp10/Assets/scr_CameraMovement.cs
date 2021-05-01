@@ -15,7 +15,7 @@ public class scr_CameraMovement : MonoBehaviour
     }
 
     // Update is called once per frazme
-    void Update()
+    void FixedUpdate()
     {
         gameObject.transform.position = new Vector3(player.transform.position.x + offsetX, transform.position.y, -10);
     }

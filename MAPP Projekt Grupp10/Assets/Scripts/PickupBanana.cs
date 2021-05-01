@@ -22,7 +22,7 @@ public class PickupBanana : MonoBehaviour
         {
             collision.GetComponent<PlayerState>().pickupBanana(bananaAmount);
             canPickUpBanana = false;
-            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(gameObject);
             audioSource.PlayOneShot(playerBananaPickupClip);
         }
     }

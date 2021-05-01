@@ -57,14 +57,14 @@ public class Scr_Movement : MonoBehaviour
         {
             slideTimer -= 1;
 
-            gameObject.transform.localScale = new Vector2(1, 1);
+            gameObject.transform.localScale = new Vector2(0.5f, 0.5f);
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
 
             if (slideTimer <= 0)
             {
                 isSliding = false;
                 gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 0.7f);
-                gameObject.transform.localScale = new Vector2(1, 1.7f);
+                gameObject.transform.localScale = new Vector2(1, 1f);
                 gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255);
             }
 

@@ -57,6 +57,7 @@ public class PlayerState : MonoBehaviour
     {
         currentHealth = currentHealth - damage;
         updateHealthIcons();
+        invinciblePlayer();
         if (currentHealth < 1)
         {
             gameOver();

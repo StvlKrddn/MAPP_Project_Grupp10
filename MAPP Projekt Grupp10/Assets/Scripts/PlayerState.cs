@@ -9,7 +9,6 @@ public class PlayerState : MonoBehaviour
 
     [SerializeField] private int maxHealth = 4;
     [SerializeField] private int currentHealth = 4;
-    private bool canTakeDamage = true;
 
     [SerializeField] private Image firstHealthPoint;
     [SerializeField] private Image secondHealthPoint;
@@ -44,6 +43,7 @@ public class PlayerState : MonoBehaviour
             PlayerPrefs.SetInt("BananasCollected", 0);
             PlayerPrefs.SetInt("HighScore", 0);
         }
+
     }
 
     // Update is called once per frame
@@ -55,14 +55,11 @@ public class PlayerState : MonoBehaviour
 
     public void damagePlayer(int damage)
     {
-        if (canTakeDamage)
+        currentHealth = currentHealth - damage;
+        updateHealthIcons();
+        if (currentHealth < 1)
         {
-            currentHealth = currentHealth - damage;
-            updateHealthIcons();
-            if (currentHealth < 1)
-            {
-                gameOver();
-            }
+            gameOver();
         }
     }
 
@@ -131,13 +128,14 @@ public class PlayerState : MonoBehaviour
 
     private void gameOver()
     {
+
         PlayerPrefs.SetInt("BananasCollected", bananasCollected);
         SceneManager.LoadScene(levelToLoad);
     }
 
     public void pickupBanana(int bananaAmount)
     {
-        bananasCollected += bananaAmount;
+        bananasCollected = bananasCollected + bananaAmount;
     }
 
     public int getBanana()
@@ -189,8 +187,7 @@ public class PlayerState : MonoBehaviour
 
     public void invinciblePlayer()
     {
-        //gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        canTakeDamage = false;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
         isFading = true;
     }
 
@@ -223,8 +220,7 @@ public class PlayerState : MonoBehaviour
             }
             else if (color.a >= 1)
             {
-                //gameObject.GetComponent<BoxCollider2D>().enabled = true;
-                canTakeDamage = true;
+                gameObject.GetComponent<BoxCollider2D>().enabled = true;
                 isFadingBack = false;
             }
         }

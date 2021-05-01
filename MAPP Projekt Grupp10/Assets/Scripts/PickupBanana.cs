@@ -18,12 +18,11 @@ public class PickupBanana : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("Banana!");
         if (collision.CompareTag("Player") == true && canPickUpBanana == true)
         {
             collision.GetComponent<PlayerState>().pickupBanana(bananaAmount);
             canPickUpBanana = false;
-            Destroy(gameObject);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
             audioSource.PlayOneShot(playerBananaPickupClip);
         }
     }

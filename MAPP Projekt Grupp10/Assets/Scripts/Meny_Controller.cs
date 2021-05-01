@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Meny_Controller : MonoBehaviour
 {
-    public GameObject menyPanel;
-    public GameObject settingsPanel;
-    public GameObject creditsPanel;
+    [SerializeField] private GameObject menyPanel;
+    [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private GameObject creditsPanel;
     private List<GameObject> panels = new List<GameObject>();
 
     void Awake(){

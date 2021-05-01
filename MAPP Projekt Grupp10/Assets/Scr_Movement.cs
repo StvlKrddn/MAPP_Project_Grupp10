@@ -92,7 +92,7 @@ public class Scr_Movement : MonoBehaviour
             grounded = true;
 
 
-            print(downRay.collider);
+            //print(downRay.collider);
 
         }
 
@@ -102,11 +102,7 @@ public class Scr_Movement : MonoBehaviour
         }
         //     print(downRay.distance + " distansen");
         //     print(yChange);
-        //
-        print(isJumping);
-        print(grounded + " Är man grounded");
         gameObject.transform.position = new Vector2(gameObject.transform.position.x + baseMovement, gameObject.transform.position.y);
-
         gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + yChange);
     }
 

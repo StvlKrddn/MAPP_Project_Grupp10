@@ -16,12 +16,10 @@ public class EnemyHarmful : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("blir man kollidad");
         if (collision.gameObject.CompareTag("Player"))
         {
-            print("HIT!");
             collision.gameObject.GetComponent<PlayerState>().damagePlayer(damage);
-            gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+            gameObject.GetComponent<Collider2D>().enabled = false;
             collision.GetComponent<PlayerState>().invinciblePlayer();
             audioSource.PlayOneShot(playerDamageClip);
         }

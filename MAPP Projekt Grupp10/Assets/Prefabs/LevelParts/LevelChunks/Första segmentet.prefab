@@ -366,6 +366,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3463609822904326631, guid: 8267331d16bb7904498a86dab0f43db0, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463609822904326631, guid: 8267331d16bb7904498a86dab0f43db0, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463609822904326631, guid: 8267331d16bb7904498a86dab0f43db0, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463609822904326631, guid: 8267331d16bb7904498a86dab0f43db0, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8267331d16bb7904498a86dab0f43db0, type: 3}
 --- !u!4 &4633996331221242619 stripped

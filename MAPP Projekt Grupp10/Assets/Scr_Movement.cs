@@ -15,7 +15,7 @@ public class Scr_Movement : MonoBehaviour
     private bool isJumping = false;
 
     [SerializeField] float jumpStrength;
-    [SerializeField] float deAcceleration;
+    [SerializeField] float deceleration;
 
 
     [SerializeField] private int slideTimer;
@@ -72,7 +72,7 @@ public class Scr_Movement : MonoBehaviour
 
         if (isJumping)
         {
-            yChange -= deAcceleration;
+            yChange -= deceleration;
             if (yChange < fallSpeed)
             {
                 yChange = fallSpeed;

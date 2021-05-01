@@ -8,12 +8,14 @@ public class scr_LevelGenerator : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] float distanceBeforeSpawning;
 
+    [SerializeField] Transform firstPart;
+
 
     private Vector3 previousEndPoint; 
     // Start is called before the first frame update
     void Start()
     {
-        Transform levelToSpawn = levelPartsList[Random.Range(0, levelPartsList.Count)];
+        Transform levelToSpawn = firstPart;
 
         Transform temp = levelToSpawn.Find("StartPoint");
 

@@ -16,6 +16,7 @@ public class EnemyHarmful : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        print("blir man kollidad");
         if (collision.gameObject.CompareTag("Player"))
         {
             print("HIT!");

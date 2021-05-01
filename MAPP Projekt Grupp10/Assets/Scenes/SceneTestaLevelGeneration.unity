@@ -1433,6 +1433,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 806774055}
     - target: {fileID: -7276131020434160687, guid: 21039a67e2025814ba04129752568e53, type: 3}
+      propertyPath: firstPart
+      value: 
+      objectReference: {fileID: 7737071842555648962, guid: 2b1e3025ecaba884a88777e208a07ce5, type: 3}
+    - target: {fileID: -7276131020434160687, guid: 21039a67e2025814ba04129752568e53, type: 3}
       propertyPath: levelPartTest
       value: 
       objectReference: {fileID: 5940392215151315181, guid: 4ba2192e6807e0441a6ae8b7206e9cb3, type: 3}
@@ -1446,7 +1450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7276131020434160687, guid: 21039a67e2025814ba04129752568e53, type: 3}
       propertyPath: levelPartsList.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -7276131020434160687, guid: 21039a67e2025814ba04129752568e53, type: 3}
       propertyPath: levelPartTest.Array.data[0]
@@ -1464,6 +1468,10 @@ PrefabInstance:
       propertyPath: levelPartsList.Array.data[2]
       value: 
       objectReference: {fileID: 3672203195714845539, guid: cb54c330a5e730f4e864bb716282df57, type: 3}
+    - target: {fileID: -7276131020434160687, guid: 21039a67e2025814ba04129752568e53, type: 3}
+      propertyPath: levelPartsList.Array.data[3]
+      value: 
+      objectReference: {fileID: 9221447309981381543, guid: ebead3fd881520a43bf9c915cd758e90, type: 3}
     - target: {fileID: 399606570196888217, guid: 21039a67e2025814ba04129752568e53, type: 3}
       propertyPath: m_RootOrder
       value: 0

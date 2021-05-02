@@ -13,7 +13,11 @@ public class ThrowRockScript : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
-        Destroy(gameObject);
+        if(collision.gameObject.CompareTag("Rock") || collision.gameObject.CompareTag("Banana") || collision.gameObject.CompareTag("Heart")){
+
+        } else {
+            Destroy(gameObject);
+        }
     }
 
 }

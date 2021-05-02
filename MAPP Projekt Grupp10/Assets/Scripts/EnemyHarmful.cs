@@ -23,6 +23,10 @@ public class EnemyHarmful : MonoBehaviour
             collision.GetComponent<PlayerState>().invinciblePlayer();
             audioSource.PlayOneShot(playerDamageClip);
         }
+        if(collision.gameObject.CompareTag("Rock")){
+            Destroy(gameObject);
+        }
+
     }
 
 }

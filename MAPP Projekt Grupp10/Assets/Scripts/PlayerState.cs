@@ -213,8 +213,12 @@ public class PlayerState : MonoBehaviour
         }
 
 
+        print(isFading + " fadear man");
+        print(isFadingBack + "anti fadear man");
+
         if (isFadingBack == true)
         {
+            isFading = false;
             color = gameObject.GetComponent<SpriteRenderer>().color;
             if (color.a < 1)
             {

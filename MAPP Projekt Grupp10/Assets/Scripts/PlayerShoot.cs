@@ -15,15 +15,11 @@ public class PlayerShoot : MonoBehaviour
         movement = gameObject.GetComponent<Scr_Movement>();
     }
 
-    private void Update(){
-        if(Input.GetMouseButtonDown(0) && timeUntilFire < Time.time){
-            Shoot();
-            timeUntilFire = Time.time + fireRate;
-        }
-    }
-
-    private void Shoot(){
+    public void Shoot(){
+        if(timeUntilFire < Time.time){
         GameObject rock = Instantiate(bulletPrefab, firingPoint.position, Quaternion.Euler(new Vector3(0f, 0f, 180f))); 
         Destroy(rock, 5f);
+        timeUntilFire = Time.time + fireRate;
+        }
     }
 }

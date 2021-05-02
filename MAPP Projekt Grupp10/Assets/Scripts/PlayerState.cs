@@ -28,7 +28,7 @@ public class PlayerState : MonoBehaviour
     private Color originalColor;
 
     [SerializeField] private int levelToLoad = 0;
-    //[SerializeField] private string levelToLoad = "GameOverScene";
+//    [SerializeField] private string levelToLoad = "GameOverScene";
 
     public bool resetPlayerPrefs;
 

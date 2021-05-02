@@ -20,7 +20,7 @@ public class PlayerShoot : MonoBehaviour
         if(timeUntilFire < Time.time && playerState.isRockAvailable()){
         playerState.throwRock();   
         GameObject rock = Instantiate(bulletPrefab, firingPoint.position, Quaternion.Euler(new Vector3(0f, 0f, 180f))); 
-        Destroy(rock, 5f);
+        Destroy(rock, 1.2f);
         timeUntilFire = Time.time + fireRate;
         }
     }

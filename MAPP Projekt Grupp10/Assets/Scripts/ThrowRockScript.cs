@@ -12,7 +12,7 @@ public class ThrowRockScript : MonoBehaviour
         rb.velocity = Vector2.right * bulletSpeed;
     }
 
-    void OnCollisionEnter2D(Collision2D collision){
+    private void OnTriggerEnter2D(Collider2D collision){
         Destroy(gameObject);
     }
 

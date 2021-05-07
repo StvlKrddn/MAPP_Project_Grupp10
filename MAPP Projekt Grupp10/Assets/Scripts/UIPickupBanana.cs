@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIPickupBanana : MonoBehaviour
 {
-    [SerializeField]private Text textComponent;
+    [SerializeField] private Text textComponent;
     private PlayerState playerState;
 
 
@@ -19,6 +19,6 @@ public class UIPickupBanana : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textComponent.text = "Bananas Collected: " + playerState.getBanana();
+        textComponent.text = "" + playerState.getBanana();
     }
 }

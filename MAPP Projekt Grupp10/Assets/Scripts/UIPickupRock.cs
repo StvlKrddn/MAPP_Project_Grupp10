@@ -19,6 +19,6 @@ public class UIPickupRock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textComponent.text = "Rocks Available: " + playerState.getAmountOfRocksAvailable();
+        textComponent.text = "" + playerState.getAmountOfRocksAvailable();
     }
 }

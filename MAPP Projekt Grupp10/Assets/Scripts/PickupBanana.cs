@@ -24,7 +24,7 @@ public class PickupBanana : MonoBehaviour
             collision.GetComponent<PlayerState>().pickupBanana(bananaAmount);
             canPickUpBanana = false;
             Instantiate(bananaParticles, transform.position, bananaParticles.transform.rotation);
-            Destroy(gameObject);
+            GetComponent<SpriteRenderer>().enabled = false;
             audioSource.PlayOneShot(playerBananaPickupClip);
         }
     }

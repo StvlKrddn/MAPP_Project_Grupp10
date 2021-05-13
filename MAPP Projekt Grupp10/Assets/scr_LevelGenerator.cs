@@ -9,16 +9,12 @@ public class scr_LevelGenerator : MonoBehaviour
     [SerializeField] float distanceBeforeSpawning;
 
     [SerializeField] Transform firstPart;
-
-
     private Vector3 previousEndPoint; 
     // Start is called before the first frame update
     void Start()
     {
         Transform levelToSpawn = firstPart;
-
         Transform temp = levelToSpawn.Find("StartPoint");
-
         float test = levelToSpawn.position.x - temp.position.x;
 
         //print(test + "Hur stor är distansen");
@@ -29,7 +25,6 @@ public class scr_LevelGenerator : MonoBehaviour
 
         //print(previousEndPoint.x + "Var är endpointen");
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -38,19 +33,13 @@ public class scr_LevelGenerator : MonoBehaviour
             addLevelPart(levelPartsList[Random.Range(0, levelPartsList.Count)], previousEndPoint);
         }
     }
-
-
     private void addLevelPart(Transform prefab, Vector3 position)
     {
         //print("händer detta eller ej");
         Transform temp = prefab.Find("StartPoint");
-
         float test = prefab.position.x - temp.position.x;
-
         Transform current = Instantiate(prefab, new Vector3(position.x + test, position.y), Quaternion.identity);
-
         previousEndPoint = current.Find("EndPoint").position;
-
         current.Find("SelfDestruct").GetComponent<scr_SelfDestruct>().player = player;
     }
 }

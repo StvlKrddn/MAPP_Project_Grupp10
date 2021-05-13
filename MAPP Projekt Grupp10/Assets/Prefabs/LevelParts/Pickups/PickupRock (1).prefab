@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRockPickupClip: {fileID: 8300000, guid: a3056c528fe0d5a49ad24b4e0946982b, type: 3}
+  rockParticles: {fileID: 42544733893576576, guid: b98f74a628073a741bb9aaa5302e5d05, type: 3}
 --- !u!82 &4822813506426321361
 AudioSource:
   m_ObjectHideFlags: 0

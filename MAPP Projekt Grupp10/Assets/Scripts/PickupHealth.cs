@@ -8,6 +8,7 @@ public class PickupHealth : MonoBehaviour
     [SerializeField] private int amountHealed = 1;
 
     [SerializeField] private AudioClip playerHealedClip;
+    [SerializeField] private ParticleSystem healthParticles;
     private AudioSource audioSource;
 
     private void Start()
@@ -21,6 +22,7 @@ public class PickupHealth : MonoBehaviour
         {
             collision.GetComponent<PlayerState>().healPlayer(amountHealed);
             canPickUpHealth = false;
+            Instantiate(healthParticles, transform.position, healthParticles.transform.rotation);
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             audioSource.PlayOneShot(playerHealedClip);
         }

@@ -8,6 +8,7 @@ public class PickupBanana : MonoBehaviour
 
     [SerializeField] private AudioClip playerBananaPickupClip;
     private AudioSource audioSource;
+    [SerializeField] private ParticleSystem bananaParticles;
 
     [SerializeField] private int bananaAmount = 1;
 
@@ -22,6 +23,7 @@ public class PickupBanana : MonoBehaviour
         {
             collision.GetComponent<PlayerState>().pickupBanana(bananaAmount);
             canPickUpBanana = false;
+            Instantiate(bananaParticles, transform.position, bananaParticles.transform.rotation);
             Destroy(gameObject);
             audioSource.PlayOneShot(playerBananaPickupClip);
         }

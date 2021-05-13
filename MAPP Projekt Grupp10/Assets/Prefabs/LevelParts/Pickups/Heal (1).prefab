@@ -125,6 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amountHealed: 1
   playerHealedClip: {fileID: 8300000, guid: a3056c528fe0d5a49ad24b4e0946982b, type: 3}
+  healthParticles: {fileID: 42544733893576576, guid: a740e1909178add48bd10878aaae7f04, type: 3}
 --- !u!82 &2165373886731599907
 AudioSource:
   m_ObjectHideFlags: 0

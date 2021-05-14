@@ -8,6 +8,7 @@ public class PickupRock : MonoBehaviour
     private PlayerState playerState;
 
     [SerializeField] private AudioClip playerRockPickupClip;
+    [SerializeField] private ParticleSystem rockParticles;
     private AudioSource audioSource;
 
     private void Start()
@@ -24,6 +25,7 @@ public class PickupRock : MonoBehaviour
             {
                 playerState.pickupRock();
                 canPickUpRock = false;
+                Instantiate(rockParticles, transform.position, rockParticles.transform.rotation);
                 gameObject.GetComponent<SpriteRenderer>().enabled = false;
                 audioSource.PlayOneShot(playerRockPickupClip);
             }

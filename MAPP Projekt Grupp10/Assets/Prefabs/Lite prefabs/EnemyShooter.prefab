@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5ea8f10a999464f82bab84dbe5ec7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 7014548435162188440, guid: 82fd936d0157f794e9db3869c99c7d88, type: 3}
+  bullet: {fileID: 7014548435162188440, guid: faad8cdc1e336fe4abafd27d33e805ef, type: 3}
   fireRate: 1
 --- !u!82 &3167818055353502369
 AudioSource:

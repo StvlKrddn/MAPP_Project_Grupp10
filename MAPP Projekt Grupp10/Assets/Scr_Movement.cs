@@ -22,11 +22,14 @@ public class Scr_Movement : MonoBehaviour
     private int startSlideTimer;
     private bool isSliding = false;
 
+    private Animator playerAnimator;
+
 
     // Start is called before the first frame update
     void Start()
     {
         startSlideTimer = slideTimer;
+        playerAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,6 +37,7 @@ public class Scr_Movement : MonoBehaviour
     {
         if (grounded && Input.GetKeyDown(KeyCode.Space) && !isSliding)
         {
+            playerAnimator.SetBool("IsJumping", true);
             Jump();
             // print("händer denna funktion");
         }
@@ -41,6 +45,11 @@ public class Scr_Movement : MonoBehaviour
         {
             Slide();
             print("händer denna funktion");
+        }
+
+        if (grounded)
+        {
+            playerAnimator.SetBool("IsJumping", false);
         }
 
     }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4617086599195617557}
   - component: {fileID: 4840456438423842195}
   - component: {fileID: 7126833441967601786}
+  - component: {fileID: 2297678864871933173}
   m_Layer: 0
   m_Name: "Veterin\xE4r"
   m_TagString: Untagged
@@ -49,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   playerDamageClip: {fileID: 8300000, guid: a3056c528fe0d5a49ad24b4e0946982b, type: 3}
+  rockParticles: {fileID: 0}
 --- !u!212 &1579811876114719219
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -226,3 +228,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   playerDamageClip: {fileID: 0}
+  rockParticles: {fileID: 42544733893576638, guid: 18b1fc90255b17646879dabd5b1ca92c, type: 3}
+--- !u!95 &2297678864871933173
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035593222941730858}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: da0ced7088ec6da4fb8bf1f5285e18ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

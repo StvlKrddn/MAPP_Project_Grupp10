@@ -8,20 +8,28 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private Transform firingPoint;
     [SerializeField] private GameObject bulletPrefab;
     private float timeUntilFire;
-    Scr_Movement movement; 
+    Scr_Movement movement;
     PlayerState playerState;
 
-    private void Start(){
+
+    private Animator playerAnimator;
+
+    private void Start()
+    {
         movement = gameObject.GetComponent<Scr_Movement>();
         playerState = gameObject.GetComponent<PlayerState>();
+        playerAnimator = GetComponent<Animator>();
     }
 
-    public void Shoot(){
-        if(timeUntilFire < Time.time && playerState.isRockAvailable()){
-        playerState.throwRock();   
-        GameObject rock = Instantiate(bulletPrefab, firingPoint.position, Quaternion.Euler(new Vector3(0f, 0f, 180f))); 
-        Destroy(rock, 1.2f);
-        timeUntilFire = Time.time + fireRate;
+    public void Shoot()
+    {
+        if (timeUntilFire < Time.time && playerState.isRockAvailable())
+        {
+            playerAnimator.SetTrigger("ThrowRock");
+            playerState.throwRock();
+            GameObject rock = Instantiate(bulletPrefab, firingPoint.position, Quaternion.Euler(new Vector3(0f, 0f, 180f)));
+            Destroy(rock, 1.2f);
+            timeUntilFire = Time.time + fireRate;
         }
     }
 }

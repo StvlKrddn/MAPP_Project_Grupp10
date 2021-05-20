@@ -9,25 +9,34 @@ public class EnemyHarmful : MonoBehaviour
     [SerializeField] private AudioClip playerDamageClip;
     private bool hasDamagedPlayer = false;
     private AudioSource audioSource;
+    private Animator enemyAnimator;
+    [SerializeField] private GameObject rockParticles;
+
 
     private void Start()
     {
         audioSource = gameObject.GetComponent<AudioSource>();
+        enemyAnimator = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && hasDamagedPlayer ==false)
+        if (collision.gameObject.CompareTag("Player") && hasDamagedPlayer == false)
         {
             collision.gameObject.GetComponent<PlayerState>().damagePlayer(damage);
             hasDamagedPlayer = true;
             collision.GetComponent<PlayerState>().invinciblePlayer();
             audioSource.PlayOneShot(playerDamageClip);
         }
-        if(collision.gameObject.CompareTag("Rock")){
-            Destroy(gameObject);
-        }
+        if (collision.gameObject.CompareTag("Rock") && hasDamagedPlayer == false)
+        {
+            hasDamagedPlayer = true;
+            enemyAnimator.SetTrigger("IsDestroyed");
+            if (rockParticles != null)
 
+                Instantiate(rockParticles, new Vector3(collision.transform.position.x + 1f, collision.transform.position.y), rockParticles.transform.rotation);
+        }
     }
 
 }
+

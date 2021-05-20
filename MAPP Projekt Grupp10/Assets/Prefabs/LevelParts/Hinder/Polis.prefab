@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3314605869370845531}
   - component: {fileID: 5774181455052240334}
   - component: {fileID: 4393067542218984088}
+  - component: {fileID: 9106169220890072396}
   m_Layer: 0
   m_Name: Polis
   m_TagString: Untagged
@@ -49,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   playerDamageClip: {fileID: 8300000, guid: a3056c528fe0d5a49ad24b4e0946982b, type: 3}
+  rockParticles: {fileID: 0}
 --- !u!212 &7263625495908797015
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -89,7 +91,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a839fb06cb36abf4ab1f76d9dd740c53, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5233e40228217c94b866121d4440c273, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -226,3 +228,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   playerDamageClip: {fileID: 0}
+  rockParticles: {fileID: 42544733893576638, guid: 18b1fc90255b17646879dabd5b1ca92c, type: 3}
+--- !u!95 &9106169220890072396
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5774181455052240329}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 345312c5c61f29f4481053a00d7b95de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

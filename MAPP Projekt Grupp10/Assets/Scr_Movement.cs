@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Scr_Movement : MonoBehaviour
 {
-    [SerializeField] private float baseMovement;
-    [SerializeField] private float fallSpeed;
+    [SerializeField] public float baseMovement;
+    [SerializeField] public float fallSpeed;
     private float yChange;
     private float xChange;
     private RaycastHit2D downRay;

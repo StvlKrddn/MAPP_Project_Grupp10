@@ -11,7 +11,7 @@ public class Scr_Movement : MonoBehaviour
     private RaycastHit2D downRay;
     private int layerMask = (1 << 9);
 
-    private bool grounded = false;
+    public bool grounded = false;
     private bool isJumping = false;
 
     [SerializeField] float jumpStrength;
@@ -37,7 +37,6 @@ public class Scr_Movement : MonoBehaviour
     {
         if (grounded && Input.GetKeyDown(KeyCode.Space) && !isSliding)
         {
-            playerAnimator.SetBool("IsJumping", true);
             Jump();
             // print("händer denna funktion");
         }
@@ -116,14 +115,15 @@ public class Scr_Movement : MonoBehaviour
     }
 
 
-    private void Jump()
+    public void Jump()
     {
+        playerAnimator.SetBool("IsJumping", true);
         isJumping = true;
         yChange = jumpStrength;
         grounded = false;
     }
 
-    private void Slide()
+    public void Slide()
     {
         isSliding = true;
         slideTimer = startSlideTimer;

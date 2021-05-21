@@ -106,7 +106,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 5233e40228217c94b866121d4440c273, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aff01ab6385fbe2419d25b2ca6949ef6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,18 +130,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0054620504, y: -0.00637234}
+  m_Offset: {x: -0.026097298, y: -0.012684822}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.4133334, y: 3.4133334}
+    oldSize: {x: 2.56, y: 2.56}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12607604, y: 0.09512463}
+  m_Size: {x: 1.2243466, y: 2.5315185}
   m_EdgeRadius: 0
 --- !u!114 &3167818055353502368
 MonoBehaviour:
@@ -157,6 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   playerDamageClip: {fileID: 8300000, guid: a3056c528fe0d5a49ad24b4e0946982b, type: 3}
+  rockParticles: {fileID: 0}
 --- !u!114 &3167818055353502380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5ea8f10a999464f82bab84dbe5ec7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 7014548435162188440, guid: 82fd936d0157f794e9db3869c99c7d88, type: 3}
+  bullet: {fileID: 7014548435162188440, guid: faad8cdc1e336fe4abafd27d33e805ef, type: 3}
   fireRate: 3
 --- !u!82 &3167818055353502369
 AudioSource:

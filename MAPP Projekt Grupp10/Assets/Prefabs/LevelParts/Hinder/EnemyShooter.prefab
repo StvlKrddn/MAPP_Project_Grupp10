@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   playerDamageClip: {fileID: 8300000, guid: a3056c528fe0d5a49ad24b4e0946982b, type: 3}
-  rockParticles: {fileID: 0}
+  rockParticles: {fileID: 42544733893576638, guid: 18b1fc90255b17646879dabd5b1ca92c, type: 3}
 --- !u!114 &3167818055353502380
 MonoBehaviour:
   m_ObjectHideFlags: 0

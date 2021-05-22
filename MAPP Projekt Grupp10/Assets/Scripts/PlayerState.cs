@@ -36,11 +36,15 @@ public class PlayerState : MonoBehaviour
 
     public bool resetPlayerPrefs;
 
+    private Animator playerAnimator;
+
 
     // Start is called before the first frame update
     void Start()
     {
         isGameActive = true;
+
+        playerAnimator = GetComponent<Animator>();
 
         resetHp();
         originalColor = gameObject.GetComponent<SpriteRenderer>().color;
@@ -139,6 +143,8 @@ public class PlayerState : MonoBehaviour
 
     private void gameOver()
     {
+
+        playerAnimator.SetTrigger("GameOver");
         isGameActive = false;
         PlayerPrefs.SetInt("BananasCollected", bananasCollected);
         levelLoader.LoadNextLevel(levelToLoad);

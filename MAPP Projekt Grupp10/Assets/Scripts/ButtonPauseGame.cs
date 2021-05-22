@@ -7,6 +7,7 @@ public class ButtonPauseGame : MonoBehaviour
 {
     private Button button;
     [SerializeField] private GameObject menu;
+    [SerializeField] private Animator canvasAnimator;
 
     private void Start()
     {
@@ -16,8 +17,9 @@ public class ButtonPauseGame : MonoBehaviour
 
     public void PauseGame()
     {
+        canvasAnimator.SetTrigger("Open");
         Time.timeScale = 0;
-        ShowMenu();
+        //ShowMenu();
     }
 
     public void ShowMenu()

@@ -17,6 +17,7 @@ public class ButtonPauseGame : MonoBehaviour
 
     public void PauseGame()
     {
+        button.interactable = false;
         canvasAnimator.SetTrigger("Open");
         Time.timeScale = 0;
         //ShowMenu();

@@ -23,6 +23,7 @@ public class Scr_Movement : MonoBehaviour
     private bool isSliding = false;
 
     private Animator playerAnimator;
+    private PlayerState playerState;
 
 
     // Start is called before the first frame update
@@ -30,6 +31,7 @@ public class Scr_Movement : MonoBehaviour
     {
         startSlideTimer = slideTimer;
         playerAnimator = GetComponent<Animator>();
+        playerState = GetComponent<PlayerState>();
     }
 
     // Update is called once per frame
@@ -110,8 +112,12 @@ public class Scr_Movement : MonoBehaviour
         }
         //     print(downRay.distance + " distansen");
         //     print(yChange);
-        gameObject.transform.position = new Vector2(gameObject.transform.position.x + baseMovement, gameObject.transform.position.y);
-        gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + yChange);
+        if (playerState.isGameActive)
+        {
+            gameObject.transform.position = new Vector2(gameObject.transform.position.x + baseMovement, gameObject.transform.position.y);
+            gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + yChange);
+        }
+        
     }
 
 

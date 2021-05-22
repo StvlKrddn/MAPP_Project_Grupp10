@@ -11,13 +11,20 @@ public class Meny_Controller : MonoBehaviour
     [SerializeField] private GameObject creditsPanel;
     private List<GameObject> panels = new List<GameObject>();
 
+    [SerializeField] private LevelLoader levelLoader;
+
+    private void Start()
+    {
+        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
+    }
+
     void Awake(){
         panels.Add(creditsPanel);
         panels.Add(menyPanel);
         panels.Add(settingsPanel);
     }
     public void startGame(int level){
-        SceneManager.LoadScene(level);
+        levelLoader.LoadNextLevel(level);
     }
     public void openPanel(GameObject gameObject){
         foreach(GameObject g in panels){

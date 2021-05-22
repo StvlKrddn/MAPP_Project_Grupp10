@@ -23,11 +23,15 @@ public class PlayerState : MonoBehaviour
 
     private bool isFading = false;
     private bool isFadingBack = false;
+    public bool isGameActive;
 
     private Color color;
     private Color originalColor;
 
     [SerializeField] private int levelToLoad = 0;
+
+    private LevelLoader levelLoader;
+
 //    [SerializeField] private string levelToLoad = "GameOverScene";
 
     public bool resetPlayerPrefs;
@@ -36,8 +40,12 @@ public class PlayerState : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isGameActive = true;
+
         resetHp();
         originalColor = gameObject.GetComponent<SpriteRenderer>().color;
+
+        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
 
         if (resetPlayerPrefs == true)
         {
@@ -131,8 +139,9 @@ public class PlayerState : MonoBehaviour
 
     private void gameOver()
     {
+        isGameActive = false;
         PlayerPrefs.SetInt("BananasCollected", bananasCollected);
-        SceneManager.LoadScene(levelToLoad);
+        levelLoader.LoadNextLevel(levelToLoad);
     }
 
     public void pickupBanana(int bananaAmount)

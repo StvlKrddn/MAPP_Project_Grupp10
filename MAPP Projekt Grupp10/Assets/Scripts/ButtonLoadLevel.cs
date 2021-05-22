@@ -8,8 +8,10 @@ public class ButtonLoadLevel : MonoBehaviour
 {
     [SerializeField] private Button button;
     [SerializeField] private int levelToLoad = 0;
+    private LevelLoader levelLoader;
     private void Start()
     {
+        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
         button = gameObject.GetComponent<Button>();
         button.onClick.AddListener(loadNewLevel);
     }
@@ -20,7 +22,7 @@ public class ButtonLoadLevel : MonoBehaviour
         {
             Time.timeScale = 1;
         }
-        SceneManager.LoadScene(levelToLoad);
+        levelLoader.LoadNextLevel(levelToLoad);
     }
 
 

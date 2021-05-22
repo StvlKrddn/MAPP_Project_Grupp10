@@ -19,6 +19,7 @@ public class EnemyHarmful : MonoBehaviour
         enemyAnimator = GetComponent<Animator>();
     }
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && hasDamagedPlayer == false)
@@ -27,6 +28,7 @@ public class EnemyHarmful : MonoBehaviour
             hasDamagedPlayer = true;
             collision.GetComponent<PlayerState>().invinciblePlayer();
             audioSource.PlayOneShot(playerDamageClip);
+            enemyAnimator.SetTrigger("IsDestroyed");
         }
         if (collision.gameObject.CompareTag("Rock") && hasDamagedPlayer == false)
         {

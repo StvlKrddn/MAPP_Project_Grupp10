@@ -8,6 +8,7 @@ public class ButtonResumeGame : MonoBehaviour
 
     private Button button;
     [SerializeField] private GameObject menu;
+    [SerializeField] private Animator canvasAnimator;
 
     private void Start()
     {
@@ -17,12 +18,23 @@ public class ButtonResumeGame : MonoBehaviour
 
     public void ResumeGame()
     {
-        Time.timeScale = 1;
-        HideMenu();
+        
+        StartCoroutine("WaitForAnimation");
+        
+        //HideMenu();
     }
 
     public void HideMenu()
     {
+
         menu.SetActive(false);
     }
+
+    IEnumerator WaitForAnimation()
+    {
+        canvasAnimator.SetTrigger("Close");
+        yield return new WaitForSecondsRealtime(1);
+        Time.timeScale = 1;
+    }
+
 }

@@ -67,6 +67,7 @@ public class PlayerState : MonoBehaviour
 
     public void damagePlayer(int damage)
     {
+        FindObjectOfType<AudioManager>().PlayPlayerHurtSound();
         if (canTakeDamage)
         {
             currentHealth = currentHealth - damage;
@@ -228,8 +229,8 @@ public class PlayerState : MonoBehaviour
         }
 
 
-        print(isFading + " fadear man");
-        print(isFadingBack + "anti fadear man");
+        //print(isFading + " fadear man");
+        //print(isFadingBack + "anti fadear man");
 
         if (isFadingBack == true)
         {

@@ -25,7 +25,7 @@ public class PickupBanana : MonoBehaviour
             canPickUpBanana = false;
             Instantiate(bananaParticles, transform.position, bananaParticles.transform.rotation);
             GetComponent<SpriteRenderer>().enabled = false;
-            audioSource.PlayOneShot(playerBananaPickupClip);
+            FindObjectOfType<AudioManager>().Play("PickupBanana");
         }
     }
 

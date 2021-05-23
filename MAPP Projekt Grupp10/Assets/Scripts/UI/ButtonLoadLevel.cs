@@ -9,11 +9,16 @@ public class ButtonLoadLevel : MonoBehaviour
     [SerializeField] private Button button;
     [SerializeField] private int levelToLoad = 0;
     private LevelLoader levelLoader;
+
+    private AudioSource audioSource;
+    public AudioClip clickSound;
+
     private void Start()
     {
         levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
         button = gameObject.GetComponent<Button>();
         button.onClick.AddListener(loadNewLevel);
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void loadNewLevel()
@@ -23,6 +28,12 @@ public class ButtonLoadLevel : MonoBehaviour
             Time.timeScale = 1;
         }
         levelLoader.LoadNextLevel(levelToLoad);
+    }
+
+    public void PlayClickSound()
+    {
+        audioSource.pitch = Random.Range(0.8f, 1);
+        audioSource.PlayOneShot(clickSound, 0.5f);
     }
 
 

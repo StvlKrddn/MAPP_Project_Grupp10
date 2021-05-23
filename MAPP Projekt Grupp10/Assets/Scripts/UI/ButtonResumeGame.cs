@@ -10,11 +10,14 @@ public class ButtonResumeGame : MonoBehaviour
     public Button pauseButton;
     [SerializeField] private GameObject menu;
     [SerializeField] private Animator canvasAnimator;
+    public AudioClip clickSound;
+    private AudioSource audioSource;
 
     private void Start()
     {
         button = gameObject.GetComponent<Button>();
         button.onClick.AddListener(ResumeGame);
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void ResumeGame()
@@ -23,6 +26,12 @@ public class ButtonResumeGame : MonoBehaviour
         StartCoroutine("WaitForAnimation");
         
         //HideMenu();
+    }
+
+    public void PlayClickSound()
+    {
+        audioSource.pitch = Random.Range(0.8f, 1);
+        audioSource.PlayOneShot(clickSound, 0.5f);
     }
 
     public void HideMenu()

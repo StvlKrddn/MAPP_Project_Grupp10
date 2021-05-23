@@ -8,11 +8,14 @@ public class ButtonPauseGame : MonoBehaviour
     private Button button;
     [SerializeField] private GameObject menu;
     [SerializeField] private Animator canvasAnimator;
+    private AudioSource audioSource;
+    public AudioClip clickSound;
 
     private void Start()
     {
         button = gameObject.GetComponent<Button>();
         button.onClick.AddListener(PauseGame);
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void PauseGame()
@@ -21,6 +24,12 @@ public class ButtonPauseGame : MonoBehaviour
         canvasAnimator.SetTrigger("Open");
         Time.timeScale = 0;
         //ShowMenu();
+    }
+
+    public void PlayClickSound()
+    {
+        audioSource.pitch = Random.Range(0.8f, 1);
+        audioSource.PlayOneShot(clickSound, 0.5f);
     }
 
     public void ShowMenu()

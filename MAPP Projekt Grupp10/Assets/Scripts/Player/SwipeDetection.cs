@@ -32,11 +32,11 @@ public class SwipeDetection : MonoBehaviour
                 Debug.Log("Swipe up");
                 playerMovement.Jump();
             }
-            else if (startPos.y > endPos.y + pixelDistanceToDetect && playerMovement.grounded)
+            /*else if (startPos.y > endPos.y + pixelDistanceToDetect && playerMovement.grounded)
             {
                 Debug.Log("Swipe down");
                 playerMovement.Slide();
-            }
+            }*/
             isMousePressed = false;
         }
 

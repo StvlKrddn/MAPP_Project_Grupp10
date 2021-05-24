@@ -19,6 +19,16 @@ public class PlayerShoot : MonoBehaviour
         movement = gameObject.GetComponent<Scr_Movement>();
         playerState = gameObject.GetComponent<PlayerState>();
         playerAnimator = GetComponent<Animator>();
+
+ 
+    }
+
+    private void FixedUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            Shoot();
+        }
     }
 
     public void Shoot()

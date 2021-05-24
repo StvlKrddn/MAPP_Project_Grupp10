@@ -42,11 +42,12 @@ public class Scr_Movement : MonoBehaviour
             Jump();
             // print("händer denna funktion");
         }
-        if (grounded && Input.GetKeyDown(KeyCode.DownArrow) && !isSliding)
+       
+        /* if (grounded && Input.GetKeyDown(KeyCode.DownArrow) && !isSliding)
         {
             Slide();
             print("händer denna funktion");
-        }
+        }*/
 
         if (grounded)
         {

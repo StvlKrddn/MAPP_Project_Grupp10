@@ -397,6 +397,10 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 1405367919}
+    - target: {fileID: 5051646449139587933, guid: 32611e8c78094a342b0e338292213568, type: 3}
+      propertyPath: transitionTime
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32611e8c78094a342b0e338292213568, type: 3}
 --- !u!95 &1405367919 stripped
@@ -883,6 +887,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2027744462}
+    - target: {fileID: 7433281086425280473, guid: bfda7dab80467a5419b2b5bacd2a081c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7433281086508144072, guid: bfda7dab80467a5419b2b5bacd2a081c, type: 3}
       propertyPath: m_Type
       value: 0

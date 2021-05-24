@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   playerDamageClip: {fileID: 0}
+  rockParticles: {fileID: 0}
 --- !u!1 &2395927326680557483
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,11 +207,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6737563463002140879, guid: 3ffac98d77fb9bc47a7dbc9d67b2ec3d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.9242153
+      value: -5.85
       objectReference: {fileID: 0}
     - target: {fileID: 6737563463002140879, guid: 3ffac98d77fb9bc47a7dbc9d67b2ec3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.017923
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 6737563463002140879, guid: 3ffac98d77fb9bc47a7dbc9d67b2ec3d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -400,7 +401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6737563463002140879, guid: 3ffac98d77fb9bc47a7dbc9d67b2ec3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.4233267
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 6737563463002140879, guid: 3ffac98d77fb9bc47a7dbc9d67b2ec3d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -466,7 +467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6737563463002140879, guid: 3ffac98d77fb9bc47a7dbc9d67b2ec3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.017923
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 6737563463002140879, guid: 3ffac98d77fb9bc47a7dbc9d67b2ec3d, type: 3}
       propertyPath: m_LocalPosition.z

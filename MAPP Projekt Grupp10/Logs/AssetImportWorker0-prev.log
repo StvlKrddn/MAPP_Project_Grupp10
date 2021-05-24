@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.0f1 (c7b5465681fb) revision 13088070'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19041.985; Version 2004; 64bit' Language: 'sv' Physical Memory: 6029 MB
+OS: 'Windows 10 Home; OS build 19041.985; Version 2004; 64bit' Language: 'sv' Physical Memory: 16335 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -11,100 +11,76 @@ C:\Program Files\Unity\Hub\Editor\2020.3.0f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/Daniel Olsson/Documents/GitHub/MAPP_Project_Grupp10/MAPP Projekt Grupp10
+C:/Users/Smenker/Documents/GitHub/MAPP_Project_Grupp10/MAPP Projekt Grupp10
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51377
-Successfully changed project path to: C:/Users/Daniel Olsson/Documents/GitHub/MAPP_Project_Grupp10/MAPP Projekt Grupp10
-C:/Users/Daniel Olsson/Documents/GitHub/MAPP_Project_Grupp10/MAPP Projekt Grupp10
+58602
+Successfully changed project path to: C:/Users/Smenker/Documents/GitHub/MAPP_Project_Grupp10/MAPP Projekt Grupp10
+C:/Users/Smenker/Documents/GitHub/MAPP_Project_Grupp10/MAPP Projekt Grupp10
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 125.62 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 40.72 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Daniel Olsson/Documents/GitHub/MAPP_Project_Grupp10/MAPP Projekt Grupp10/Assets
+[Subsystems] Discovering subsystems at path C:/Users/Smenker/Documents/GitHub/MAPP_Project_Grupp10/MAPP Projekt Grupp10/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) HD Graphics 620 (ID=0x5916)
+    Renderer: NVIDIA GeForce GTX 1070 (ID=0x1b81)
     Vendor:   
-    VRAM:     3014 MB
-    Driver:   24.20.100.6194
+    VRAM:     8088 MB
+    Driver:   27.21.14.5671
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56112
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56064
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006210 seconds.
+Registered in 0.003237 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 87.47 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 38.88 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  4.267 seconds
+- Completed reload, in  5.677 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001959 seconds.
+Registered in 0.001139 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 86.53 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 48.94 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.241 seconds
+- Completed reload, in  1.096 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1807 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 85.3 MB.
-System memory in use after: 85.4 MB.
+Unloading 1831 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.9 MB.
+System memory in use after: 86.0 MB.
 
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2256.
-Total: 3.709600 ms (FindLiveObjects: 0.286800 ms CreateObjectMapping: 0.098200 ms MarkObjects: 3.152800 ms  DeleteObjects: 0.169500 ms)
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2281.
+Total: 2.576900 ms (FindLiveObjects: 0.337600 ms CreateObjectMapping: 0.069600 ms MarkObjects: 2.087400 ms  DeleteObjects: 0.081200 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Meny.unity
-  artifactKey: Guid(777b6b11af56ed947aead82350bedbe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Meny.unity using Guid(777b6b11af56ed947aead82350bedbe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ba8aef7109347534325642ff5a882b6') in 0.045410 seconds
-  Import took 0.055644 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002435 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.674 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 84.9 MB.
-System memory in use after: 85.0 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2260.
-Total: 4.864700 ms (FindLiveObjects: 0.389300 ms CreateObjectMapping: 0.118100 ms MarkObjects: 4.315600 ms  DeleteObjects: 0.039300 ms)
+  path: Assets/Prefabs/LevelParts/LevelGenerator.prefab
+  artifactKey: Guid(21039a67e2025814ba04129752568e53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/LevelParts/LevelGenerator.prefab using Guid(21039a67e2025814ba04129752568e53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cf2df91662cac06a76b81a4bd23b11d') in 0.064484 seconds
+  Import took 0.068987 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

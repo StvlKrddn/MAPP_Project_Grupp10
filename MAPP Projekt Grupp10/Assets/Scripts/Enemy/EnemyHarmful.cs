@@ -28,12 +28,19 @@ public class EnemyHarmful : MonoBehaviour
             hasDamagedPlayer = true;
             collision.GetComponent<PlayerState>().invinciblePlayer();
             audioSource.PlayOneShot(playerDamageClip);
-            enemyAnimator.SetTrigger("IsDestroyed");
+            if (enemyAnimator != null)
+            {
+                enemyAnimator.SetTrigger("IsDestroyed");
+            }
+            
         }
         if (collision.gameObject.CompareTag("Rock") && hasDamagedPlayer == false)
         {
             hasDamagedPlayer = true;
-            enemyAnimator.SetTrigger("IsDestroyed");
+            if (enemyAnimator != null)
+            {
+                enemyAnimator.SetTrigger("IsDestroyed");
+            }
             if (rockParticles != null)
 
                 Instantiate(rockParticles, new Vector3(collision.transform.position.x + 1f, collision.transform.position.y), rockParticles.transform.rotation);

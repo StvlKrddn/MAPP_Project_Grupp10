@@ -27,7 +27,7 @@ public class VideoController : MonoBehaviour
     IEnumerator PlayVideo()
     {
         videoPlayer.Play();
-        yield return new WaitForSeconds((float)cutScene.length-0.5f);
+        yield return new WaitForSeconds((float)cutScene.length);
         levelLoader.LoadNextLevel(levelIndexToLoad);
 
     }

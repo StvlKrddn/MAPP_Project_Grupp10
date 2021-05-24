@@ -12,6 +12,7 @@ public class EnemyProjectile : MonoBehaviour
     private Rigidbody2D rb;
 
     [SerializeField] private int damage = 1;
+    [SerializeField] private GameObject collisionParticles;
 
     Vector2 moveDirection;
 
@@ -29,6 +30,7 @@ public class EnemyProjectile : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.GetComponent<PlayerState>().damagePlayer(damage);
+            Instantiate(collisionParticles, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }

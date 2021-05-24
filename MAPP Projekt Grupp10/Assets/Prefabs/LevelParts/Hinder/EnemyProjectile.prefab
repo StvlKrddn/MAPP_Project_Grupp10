@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 35cfe1c20617e23469074f96d20dd663, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -127,6 +127,7 @@ MonoBehaviour:
   bulletSpeed: 3
   target: {fileID: 3167818055353502374, guid: a7a23a4c6ec0e6045971a85bba5754ea, type: 3}
   damage: 1
+  collisionParticles: {fileID: 42544733893576638, guid: 08c279ae8d6207641b0fb5457ee031f9, type: 3}
 --- !u!82 &6219703310161663813
 AudioSource:
   m_ObjectHideFlags: 0

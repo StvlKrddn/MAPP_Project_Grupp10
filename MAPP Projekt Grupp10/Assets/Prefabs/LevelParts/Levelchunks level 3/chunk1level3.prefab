@@ -189,6 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   playerDamageClip: {fileID: 0}
+  rockParticles: {fileID: 0}
 --- !u!1001 &588416541037640090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -276,7 +277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3167818055353502381, guid: 2afefd302aa2b0249b0a7a9ee39864eb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.59
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 3167818055353502381, guid: 2afefd302aa2b0249b0a7a9ee39864eb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -462,7 +463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3167818055353502381, guid: 2afefd302aa2b0249b0a7a9ee39864eb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.791832
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 3167818055353502381, guid: 2afefd302aa2b0249b0a7a9ee39864eb, type: 3}
       propertyPath: m_LocalPosition.z

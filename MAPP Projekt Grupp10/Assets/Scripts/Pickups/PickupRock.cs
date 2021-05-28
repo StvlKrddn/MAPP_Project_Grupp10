@@ -27,7 +27,7 @@ public class PickupRock : MonoBehaviour
                 canPickUpRock = false;
                 Instantiate(rockParticles, transform.position, rockParticles.transform.rotation);
                 gameObject.GetComponent<SpriteRenderer>().enabled = false;
-                audioSource.PlayOneShot(playerRockPickupClip);
+                FindObjectOfType<AudioManager>().Play("PickupRock");
             }
 
         }

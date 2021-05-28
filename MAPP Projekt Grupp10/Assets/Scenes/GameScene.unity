@@ -2461,8 +2461,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 339c40fa938236c4280196964e273b06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yPixelDistanceToDetect: 20
-  xPixelDistanceToDetect: 20
+  yPixelDistanceToDetect: 50
+  xPixelDistanceToDetect: 50
 --- !u!4 &1142545275
 Transform:
   m_ObjectHideFlags: 0

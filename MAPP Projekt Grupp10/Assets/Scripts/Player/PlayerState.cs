@@ -21,9 +21,12 @@ public class PlayerState : MonoBehaviour
     [SerializeField] private int amountOfRocksAvailable = 0;
     [SerializeField] private int maxAmountOfRocksAvailable = 3;
 
+    private int gamesLost;
+
     private bool isFading = false;
     private bool isFadingBack = false;
     public bool isGameActive;
+    public bool isTutorialEnabled = false;
 
     private Color color;
     private Color originalColor;
@@ -32,11 +35,12 @@ public class PlayerState : MonoBehaviour
 
     private LevelLoader levelLoader;
 
-//    [SerializeField] private string levelToLoad = "GameOverScene";
+    //    [SerializeField] private string levelToLoad = "GameOverScene";
 
     public bool resetPlayerPrefs;
 
     private Animator playerAnimator;
+    public GameObject tutorialCanvas;
 
 
     // Start is called before the first frame update
@@ -51,19 +55,34 @@ public class PlayerState : MonoBehaviour
 
         levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
 
+        gamesLost = PlayerPrefs.GetInt("GamesLost");
+
         if (resetPlayerPrefs == true)
         {
-            PlayerPrefs.SetInt("BananasCollected", 0);
-            PlayerPrefs.SetInt("HighScore", 0);
+            ResetPlayerPrefs();
+        }
+
+        if ( gamesLost == 0 || isTutorialEnabled==true)
+        {
+            tutorialCanvas.SetActive(true);
+            tutorialCanvas.GetComponent<UiTutorial>().StartTutorial();
         }
     }
 
-    // Update is called once per frame
 
     private void FixedUpdate()
     {
         checkForFade();
     }
+
+    private void ResetPlayerPrefs()
+    {
+        PlayerPrefs.SetInt("BananasCollected", 0);
+        PlayerPrefs.SetInt("HighScore", 0);
+        PlayerPrefs.SetInt("GamesLost", 0);
+    }
+
+
 
     public void damagePlayer(int damage)
     {
@@ -147,6 +166,7 @@ public class PlayerState : MonoBehaviour
         playerAnimator.SetTrigger("GameOver");
         isGameActive = false;
         PlayerPrefs.SetInt("BananasCollected", bananasCollected);
+        PlayerPrefs.SetInt("GamesLost", PlayerPrefs.GetInt("GamesLost") + 1);
         levelLoader.LoadNextLevel(levelToLoad);
     }
 

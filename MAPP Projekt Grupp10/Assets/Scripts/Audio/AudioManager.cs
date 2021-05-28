@@ -5,16 +5,11 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
-    
-    public AudioClip[] playerHurtSounds;
-    public int clipIndex;
-    public AudioSource playerHurtSource;
 
     public static AudioManager instance;
     
     static System.Random rnd = new System.Random();
 
-    // Start is called before the first frame update
     void Awake()
     {
         // Ser till att endast en instans av AudioManager finns samtidigt
@@ -54,33 +49,6 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = RandomNumberGenerator(s.minPitch, s.maxPitch); // Sätter en slumpmässig pitch på ljudet varje gång det spelas
         s.source.Play(); // Spelar ljudet
     }
-
-    public void PlayPlayerHurtSound() // Används när spelaren tar skada
-    {
-        /*if (clipIndex < playerHurtSounds.Length)
-        {
-            playerHurtSource.PlayOneShot(playerHurtSounds[clipIndex]);
-            clipIndex++;
-        }
-        else
-        {
-            clipIndex = 0;
-            playerHurtSource.PlayOneShot(playerHurtSounds[clipIndex]);
-            clipIndex++;
-        }*/
-        clipIndex = RepeatCheck(clipIndex, playerHurtSounds.Length);
-        playerHurtSource.PlayOneShot(playerHurtSounds[clipIndex]);
-    }
-
-    private int RepeatCheck(int preciousIndex, int range)
-    {
-        int index = rnd.Next(0, range);
-        while (index == preciousIndex)
-            index = rnd.Next(0, range);
-        return index;
-    }
-
-    
 
     private float RandomNumberGenerator(float min, float max)
     {

@@ -12,22 +12,17 @@ public class VideoController : MonoBehaviour
     public VideoClip cutScene;
     public LevelLoader levelLoader;
     public int levelIndexToLoad = 1;
+    [SerializeField] private float sceneTimeFreeze;
 
     void Start()
     {
         StartCoroutine("PlayVideo"); 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     IEnumerator PlayVideo()
     {
         videoPlayer.Play();
-        yield return new WaitForSeconds((float)cutScene.length);
+        yield return new WaitForSeconds((float)cutScene.length+sceneTimeFreeze);
         levelLoader.LoadNextLevel(levelIndexToLoad);
 
     }

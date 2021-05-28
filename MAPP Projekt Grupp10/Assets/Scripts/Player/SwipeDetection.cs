@@ -40,6 +40,7 @@ public class SwipeDetection : MonoBehaviour
             }*/
             else if (startPos.x < endPos.x - xPixelDistanceToDetect)
             {
+                Debug.Log("Swipe right");
                 playerMovement.GetComponent<PlayerShoot>().Shoot();
             }
 

@@ -8,12 +8,6 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] private float transitionTime = 1f;
     public Animator transition;
 
-    private void Update()
-    {
-    
-    }
-
-
     IEnumerator LoadLevel(int levelIndex)
     {
         transition.SetTrigger("Start");

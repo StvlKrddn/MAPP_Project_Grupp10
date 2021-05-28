@@ -39,6 +39,11 @@ public class PlayerState : MonoBehaviour
     private Animator playerAnimator;
 
 
+    [SerializeField] List<AudioClip> hurtPlayerAudioClips;
+
+    public AudioSource audioSource;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,7 +73,7 @@ public class PlayerState : MonoBehaviour
     public void damagePlayer(int damage)
     {
         if (canTakeDamage)
-        {
+        {   
             currentHealth = currentHealth - damage;
             updateHealthIcons();
             if (currentHealth < 1)

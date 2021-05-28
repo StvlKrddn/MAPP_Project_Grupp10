@@ -3827,6 +3827,10 @@ PrefabInstance:
       propertyPath: hurtPlayerAudioClips.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: b60d96a15f901504789dd3f22bf467a6, type: 3}
+    - target: {fileID: 1883352491, guid: d822c3d5f322a864cb4cf3eb436057cd, type: 3}
+      propertyPath: proportionalSpeed
+      value: 554
+      objectReference: {fileID: 0}
     - target: {fileID: 7709297403645039777, guid: d822c3d5f322a864cb4cf3eb436057cd, type: 3}
       propertyPath: m_RootOrder
       value: 3

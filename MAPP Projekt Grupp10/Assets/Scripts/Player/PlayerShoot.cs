@@ -7,6 +7,7 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private float fireRate;
     [SerializeField] private Transform firingPoint;
     [SerializeField] private GameObject bulletPrefab;
+    
     private float timeUntilFire;
     Scr_Movement movement;
     PlayerState playerState;

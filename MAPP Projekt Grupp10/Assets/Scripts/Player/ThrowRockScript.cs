@@ -7,9 +7,15 @@ public class ThrowRockScript : MonoBehaviour
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float bulletDamage;
     public Rigidbody2D rb;
+    private GameObject player;
+    
 
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
     private void FixedUpdate(){
-        rb.velocity = Vector2.right * bulletSpeed;
+        rb.velocity = Vector2.right * (bulletSpeed * player.GetComponent<Scr_Movement>().baseMovement );
     }
 
     private void OnTriggerEnter2D(Collider2D collision){

@@ -108,6 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseMovement: 0.325
   fallSpeed: -0.45
+  grounded: 0
   jumpStrength: 1.17
   deceleration: 0.1
   slideTimer: 60
@@ -223,6 +224,7 @@ MonoBehaviour:
   bananasCollected: 0
   amountOfRocksAvailable: 0
   maxAmountOfRocksAvailable: 3
+  isGameActive: 0
   levelToLoad: 2
   resetPlayerPrefs: 0
 --- !u!114 &1883352491

@@ -40,5 +40,4 @@ public class UiTutorial : MonoBehaviour
         throwTutorial.SetActive(true);
     }
 
-
 }

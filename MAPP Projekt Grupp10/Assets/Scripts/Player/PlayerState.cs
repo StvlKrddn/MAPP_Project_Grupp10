@@ -26,7 +26,7 @@ public class PlayerState : MonoBehaviour
     private bool isFading = false;
     private bool isFadingBack = false;
     public bool isGameActive;
-    public bool isTutorialEnabled = false;
+    public bool isTutorialEnabled;
 
     private Color color;
     private Color originalColor;
@@ -53,6 +53,15 @@ public class PlayerState : MonoBehaviour
     {
         isGameActive = true;
 
+        if (PlayerPrefs.GetInt("TutorialEnabled") == 0)
+        {
+            isTutorialEnabled = true;
+        }
+        else
+        {
+            isTutorialEnabled = false;
+        }
+
         playerAnimator = GetComponent<Animator>();
 
         resetHp();
@@ -67,7 +76,13 @@ public class PlayerState : MonoBehaviour
             ResetPlayerPrefs();
         }
 
-        if ( gamesLost == 0 || isTutorialEnabled==true)
+        /* if (gamesLost == 0 || isTutorialEnabled == true)
+         {
+             tutorialCanvas.SetActive(true);
+             tutorialCanvas.GetComponent<UiTutorial>().StartTutorial();
+         }*/
+
+        if (isTutorialEnabled == true)
         {
             tutorialCanvas.SetActive(true);
             tutorialCanvas.GetComponent<UiTutorial>().StartTutorial();
@@ -91,12 +106,12 @@ public class PlayerState : MonoBehaviour
 
     public void damagePlayer(int damage)
     {
-        audioSource.clip = hurtPlayerAudioClips[Random.Range(0,hurtPlayerAudioClips.Count)];
-        audioSource.pitch = Random.Range(0.85f,1.16f);
+        audioSource.clip = hurtPlayerAudioClips[Random.Range(0, hurtPlayerAudioClips.Count)];
+        audioSource.pitch = Random.Range(0.85f, 1.16f);
         audioSource.Play();
 
         if (canTakeDamage)
-        {   
+        {
             currentHealth = currentHealth - damage;
             updateHealthIcons();
             if (currentHealth < 1)
@@ -177,6 +192,8 @@ public class PlayerState : MonoBehaviour
         PlayerPrefs.SetInt("BananasCollected", bananasCollected);
         PlayerPrefs.SetInt("GamesLost", PlayerPrefs.GetInt("GamesLost") + 1);
         levelLoader.LoadNextLevel(levelToLoad);
+
+
     }
 
     public void pickupBanana(int bananaAmount)
@@ -275,6 +292,19 @@ public class PlayerState : MonoBehaviour
                 canTakeDamage = true;
                 isFadingBack = false;
             }
+        }
+    }
+
+    public void ToggleTutorialOn(bool newValue)
+    {
+        isTutorialEnabled = newValue;
+        if (newValue == true)
+        {
+            PlayerPrefs.SetInt("TutorialEnabled", 0);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("TutorialEnabled", 1);
         }
     }
 

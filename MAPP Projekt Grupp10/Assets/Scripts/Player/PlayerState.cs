@@ -39,6 +39,11 @@ public class PlayerState : MonoBehaviour
     private Animator playerAnimator;
 
 
+    [SerializeField] List<AudioClip> hurtPlayerAudioClips;
+
+    public AudioSource audioSource;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,8 +72,12 @@ public class PlayerState : MonoBehaviour
 
     public void damagePlayer(int damage)
     {
+        audioSource.clip = hurtPlayerAudioClips[Random.Range(0,hurtPlayerAudioClips.Count)];
+        audioSource.pitch = Random.Range(0.85f,1.16f);
+        audioSource.Play();
+
         if (canTakeDamage)
-        {
+        {   
             currentHealth = currentHealth - damage;
             updateHealthIcons();
             if (currentHealth < 1)

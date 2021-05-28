@@ -72,6 +72,10 @@ public class PlayerState : MonoBehaviour
 
     public void damagePlayer(int damage)
     {
+        audioSource.clip = hurtPlayerAudioClips[Random.Range(0,hurtPlayerAudioClips.Count)];
+        audioSource.pitch = Random.Range(0.85f,1.16f);
+        audioSource.Play();
+
         if (canTakeDamage)
         {   
             currentHealth = currentHealth - damage;

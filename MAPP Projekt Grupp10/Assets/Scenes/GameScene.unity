@@ -3811,6 +3811,22 @@ PrefabInstance:
       propertyPath: secondHealthPoint
       value: 
       objectReference: {fileID: 764020014}
+    - target: {fileID: 1883352485, guid: d822c3d5f322a864cb4cf3eb436057cd, type: 3}
+      propertyPath: hurtPlayerAudioClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883352485, guid: d822c3d5f322a864cb4cf3eb436057cd, type: 3}
+      propertyPath: hurtPlayerAudioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b720f2c95001138488f1615a8ecc5823, type: 3}
+    - target: {fileID: 1883352485, guid: d822c3d5f322a864cb4cf3eb436057cd, type: 3}
+      propertyPath: hurtPlayerAudioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: a16751b4414d4c54fa9365ad52afc5b6, type: 3}
+    - target: {fileID: 1883352485, guid: d822c3d5f322a864cb4cf3eb436057cd, type: 3}
+      propertyPath: hurtPlayerAudioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b60d96a15f901504789dd3f22bf467a6, type: 3}
     - target: {fileID: 7709297403645039777, guid: d822c3d5f322a864cb4cf3eb436057cd, type: 3}
       propertyPath: m_RootOrder
       value: 3

@@ -24,7 +24,7 @@ public class PickupHealth : MonoBehaviour
             canPickUpHealth = false;
             Instantiate(healthParticles, transform.position, healthParticles.transform.rotation);
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            audioSource.PlayOneShot(playerHealedClip);
+            FindObjectOfType<AudioManager>().Play("PickupHealth");
         }
     }
 

@@ -24,8 +24,8 @@ public class EnemyHarmful : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && hasDamagedPlayer == false)
         {
-            collision.gameObject.GetComponent<PlayerState>().damagePlayer(damage);
             hasDamagedPlayer = true;
+            collision.gameObject.GetComponent<PlayerState>().damagePlayer(damage);
             collision.GetComponent<PlayerState>().invinciblePlayer();
             audioSource.PlayOneShot(playerDamageClip);
             if (enemyAnimator != null)
@@ -36,6 +36,7 @@ public class EnemyHarmful : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Rock") && hasDamagedPlayer == false)
         {
+            FindObjectOfType<AudioManager>().Play("EnemyHurt");
             hasDamagedPlayer = true;
             if (enemyAnimator != null)
             {

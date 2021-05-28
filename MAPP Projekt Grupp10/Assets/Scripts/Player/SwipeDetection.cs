@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SwipeDetection : MonoBehaviour
 {
-    public float pixelDistanceToDetect = 20;
+    public float yPixelDistanceToDetect = 20;
+    public float xPixelDistanceToDetect = 20;
     private Vector3 startPos;
     private Vector3 endPos;
     private bool isMousePressed;
@@ -27,7 +28,7 @@ public class SwipeDetection : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Mouse0) && isMousePressed)
         {
             endPos = Input.mousePosition;
-            if (startPos.y < endPos.y - pixelDistanceToDetect && playerMovement.grounded)
+            if (startPos.y < endPos.y - yPixelDistanceToDetect && playerMovement.grounded)
             {
                 Debug.Log("Swipe up");
                 playerMovement.Jump();
@@ -37,6 +38,11 @@ public class SwipeDetection : MonoBehaviour
                 Debug.Log("Swipe down");
                 playerMovement.Slide();
             }*/
+            else if (startPos.x < endPos.x - xPixelDistanceToDetect)
+            {
+                playerMovement.GetComponent<PlayerShoot>().Shoot();
+            }
+
             isMousePressed = false;
         }
 

@@ -3673,6 +3673,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5131113898181516619, guid: 522a2286e2996aa41a96c51b534a532b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 160226a81f59e01459fafc9fddcf7884, type: 3}
+    - target: {fileID: 5131113898268701892, guid: 522a2286e2996aa41a96c51b534a532b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 160226a81f59e01459fafc9fddcf7884, type: 3}
+    - target: {fileID: 5131113898512733057, guid: 522a2286e2996aa41a96c51b534a532b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 160226a81f59e01459fafc9fddcf7884, type: 3}
     - target: {fileID: 5131113898579359064, guid: 522a2286e2996aa41a96c51b534a532b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -3817,6 +3829,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 5131113899184979535, guid: 522a2286e2996aa41a96c51b534a532b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 160226a81f59e01459fafc9fddcf7884, type: 3}
     - target: {fileID: 5131113899329214865, guid: 522a2286e2996aa41a96c51b534a532b, type: 3}
       propertyPath: clickSound
       value: 

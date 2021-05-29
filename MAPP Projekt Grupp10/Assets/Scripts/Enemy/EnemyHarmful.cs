@@ -27,7 +27,6 @@ public class EnemyHarmful : MonoBehaviour
             hasDamagedPlayer = true;
             collision.gameObject.GetComponent<PlayerState>().damagePlayer(damage);
             collision.GetComponent<PlayerState>().invinciblePlayer();
-            audioSource.PlayOneShot(playerDamageClip);
             if (enemyAnimator != null)
             {
                 enemyAnimator.SetTrigger("IsDestroyed");

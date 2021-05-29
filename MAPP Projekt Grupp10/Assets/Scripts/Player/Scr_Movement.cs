@@ -40,7 +40,6 @@ public class Scr_Movement : MonoBehaviour
         if (grounded && Input.GetKeyDown(KeyCode.Space) && !isSliding)
         {
             Jump();
-            FindObjectOfType<AudioManager>().Play("Jump");
             // print("händer denna funktion");
         }
        
@@ -125,6 +124,7 @@ public class Scr_Movement : MonoBehaviour
 
     public void Jump()
     {
+        FindObjectOfType<AudioManager>().Play("Jump");
         playerAnimator.SetBool("IsJumping", true);
         isJumping = true;
         yChange = jumpStrength;

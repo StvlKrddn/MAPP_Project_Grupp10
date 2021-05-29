@@ -1143,7 +1143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7433281085136716992, guid: bfda7dab80467a5419b2b5bacd2a081c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7433281085136716998, guid: bfda7dab80467a5419b2b5bacd2a081c, type: 3}
       propertyPath: m_Type
@@ -1521,6 +1521,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meny_Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7433281086214605101, guid: bfda7dab80467a5419b2b5bacd2a081c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7433281086388407420, guid: bfda7dab80467a5419b2b5bacd2a081c, type: 3}
       propertyPath: m_Text
       value: Touch anywhere to play!
@@ -1666,8 +1670,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7433281086447064283, guid: bfda7dab80467a5419b2b5bacd2a081c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7433281086447064283, guid: bfda7dab80467a5419b2b5bacd2a081c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -41.000008
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7433281086508144072, guid: bfda7dab80467a5419b2b5bacd2a081c, type: 3}
       propertyPath: m_Type

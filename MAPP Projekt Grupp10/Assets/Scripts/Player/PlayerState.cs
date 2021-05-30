@@ -56,6 +56,7 @@ public class PlayerState : MonoBehaviour
         if (PlayerPrefs.GetInt("TutorialEnabled") == 0)
         {
             isTutorialEnabled = true;
+
         }
         else
         {
@@ -64,12 +65,10 @@ public class PlayerState : MonoBehaviour
 
         playerAnimator = GetComponent<Animator>();
 
-        resetHp();
+        ResetHp();
         originalColor = gameObject.GetComponent<SpriteRenderer>().color;
 
         levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
-
-        gamesLost = PlayerPrefs.GetInt("GamesLost");
 
         if (resetPlayerPrefs == true)
         {
@@ -82,29 +81,31 @@ public class PlayerState : MonoBehaviour
              tutorialCanvas.GetComponent<UiTutorial>().StartTutorial();
          }*/
 
-        if (isTutorialEnabled == true)
+        if (isTutorialEnabled == true || PlayerPrefs.GetInt("FirstTimePlaying") == 0)
         {
             tutorialCanvas.SetActive(true);
             tutorialCanvas.GetComponent<UiTutorial>().StartTutorial();
+            PlayerPrefs.SetInt("FirstTimePlaying", 1);
         }
     }
 
 
     private void FixedUpdate()
     {
-        checkForFade();
+        CheckForFade();
     }
 
-    private void ResetPlayerPrefs()
+    public void ResetPlayerPrefs()
     {
         PlayerPrefs.SetInt("BananasCollected", 0);
         PlayerPrefs.SetInt("HighScore", 0);
         PlayerPrefs.SetInt("GamesLost", 0);
+        PlayerPrefs.SetInt("FirstTimePlaying", 0);
     }
 
 
 
-    public void damagePlayer(int damage)
+    public void DamagePlayer(int damage)
     {
         audioSource.clip = hurtPlayerAudioClips[Random.Range(0, hurtPlayerAudioClips.Count)];
         audioSource.pitch = Random.Range(0.85f, 1.16f);
@@ -113,38 +114,38 @@ public class PlayerState : MonoBehaviour
         if (canTakeDamage)
         {
             currentHealth = currentHealth - damage;
-            updateHealthIcons();
+            UpdateHealthIcons();
             if (currentHealth < 1)
             {
-                gameOver();
+                GameOver();
             }
         }
     }
 
-    public void healPlayer(int heal)
+    public void HealPlayer(int heal)
     {
 
         if (currentHealth < maxHealth)
         {
             if (currentHealth + heal > maxHealth)
             {
-                resetHp();
+                ResetHp();
             }
             else
             {
                 currentHealth = currentHealth + heal;
-                updateHealthIcons();
+                UpdateHealthIcons();
             }
         }
     }
 
-    public void resetHp()
+    public void ResetHp()
     {
         currentHealth = maxHealth;
-        updateHealthIcons();
+        UpdateHealthIcons();
     }
 
-    private void updateHealthIcons()
+    private void UpdateHealthIcons()
     {
         if (currentHealth == 4)
         {
@@ -184,7 +185,7 @@ public class PlayerState : MonoBehaviour
         }
     }
 
-    private void gameOver()
+    private void GameOver()
     {
 
         playerAnimator.SetTrigger("GameOver");
@@ -196,37 +197,37 @@ public class PlayerState : MonoBehaviour
 
     }
 
-    public void pickupBanana(int bananaAmount)
+    public void PickupBanana(int bananaAmount)
     {
         bananasCollected += bananaAmount;
     }
 
-    public int getBanana()
+    public int GetBanana()
     {
         return bananasCollected;
     }
 
-    public int getCurrentHealth()
+    public int GetCurrentHealth()
     {
         return currentHealth;
     }
 
-    public int getMaxHealth()
+    public int GetMaxHealth()
     {
         return maxHealth;
     }
 
-    public int getAmountOfRocksAvailable()
+    public int GetAmountOfRocksAvailable()
     {
         return amountOfRocksAvailable;
     }
 
-    public int getMaxAmountOfRocksAvailable()
+    public int GetMaxAmountOfRocksAvailable()
     {
         return maxAmountOfRocksAvailable;
     }
 
-    public void pickupRock()
+    public void PickupRock()
     {
         if (amountOfRocksAvailable < maxAmountOfRocksAvailable)
         {
@@ -234,12 +235,12 @@ public class PlayerState : MonoBehaviour
         }
     }
 
-    public void throwRock()
+    public void ThrowRock()
     {
         amountOfRocksAvailable--;
     }
 
-    public bool isRockAvailable()
+    public bool IsRockAvailable()
     {
         if (amountOfRocksAvailable > 0)
         {
@@ -248,14 +249,14 @@ public class PlayerState : MonoBehaviour
         else return false;
     }
 
-    public void invinciblePlayer()
+    public void InvinciblePlayer()
     {
         //gameObject.GetComponent<BoxCollider2D>().enabled = false;
         canTakeDamage = false;
         isFading = true;
     }
 
-    private void checkForFade()
+    private void CheckForFade()
     {
         if (isFading == true)
         {

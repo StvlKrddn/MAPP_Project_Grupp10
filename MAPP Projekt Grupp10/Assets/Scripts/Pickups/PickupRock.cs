@@ -21,9 +21,9 @@ public class PickupRock : MonoBehaviour
         if (collision.CompareTag("Player") == true && canPickUpRock == true)
         {
             playerState = collision.GetComponent<PlayerState>();
-            if (playerState.getAmountOfRocksAvailable() < playerState.getMaxAmountOfRocksAvailable())
+            if (playerState.GetAmountOfRocksAvailable() < playerState.GetMaxAmountOfRocksAvailable())
             {
-                playerState.pickupRock();
+                playerState.PickupRock();
                 canPickUpRock = false;
                 Instantiate(rockParticles, transform.position, rockParticles.transform.rotation);
                 gameObject.GetComponent<SpriteRenderer>().enabled = false;

@@ -21,7 +21,7 @@ public class PickupBanana : MonoBehaviour
     {
         if (collision.CompareTag("Player") == true && canPickUpBanana == true)
         {
-            collision.GetComponent<PlayerState>().pickupBanana(bananaAmount);
+            collision.GetComponent<PlayerState>().PickupBanana(bananaAmount);
             canPickUpBanana = false;
             Instantiate(bananaParticles, transform.position, bananaParticles.transform.rotation);
             GetComponent<SpriteRenderer>().enabled = false;

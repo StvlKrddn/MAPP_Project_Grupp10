@@ -17,11 +17,11 @@ public class ButtonLoadLevel : MonoBehaviour
     {
         levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
         button = gameObject.GetComponent<Button>();
-        button.onClick.AddListener(loadNewLevel);
+        button.onClick.AddListener(LoadNewLevel);
         audioSource = GetComponent<AudioSource>();
     }
 
-    public void loadNewLevel()
+    public void LoadNewLevel()
     {
         if (Time.timeScale < 1)
         {

@@ -16,11 +16,11 @@ public class EnemyShoot : MonoBehaviour
 
     private void Update()
     {
-        checkIfTimeToFire();
+        CheckIfTimeToFire();
 
     }
 
-    private void checkIfTimeToFire()
+    private void CheckIfTimeToFire()
     {
         if (Time.time > nextFire)
         {

@@ -19,6 +19,6 @@ public class UIPickupBanana : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textComponent.text = "" + playerState.getBanana();
+        textComponent.text = "" + playerState.GetBanana();
     }
 }

@@ -33,7 +33,7 @@ public class ButtonLoadLevel : MonoBehaviour
     public void PlayClickSound()
     {
         audioSource.pitch = Random.Range(0.8f, 1);
-        audioSource.PlayOneShot(clickSound, 0.5f);
+        audioSource.PlayOneShot(clickSound);
     }
 
 

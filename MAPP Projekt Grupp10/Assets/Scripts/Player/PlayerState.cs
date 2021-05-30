@@ -53,16 +53,6 @@ public class PlayerState : MonoBehaviour
     {
         isGameActive = true;
 
-        if (PlayerPrefs.GetInt("TutorialEnabled") == 0)
-        {
-            isTutorialEnabled = true;
-
-        }
-        else
-        {
-            isTutorialEnabled = false;
-        }
-
         playerAnimator = GetComponent<Animator>();
 
         ResetHp();
@@ -295,18 +285,4 @@ public class PlayerState : MonoBehaviour
             }
         }
     }
-
-    public void ToggleTutorialOn(bool newValue)
-    {
-        isTutorialEnabled = newValue;
-        if (newValue == true)
-        {
-            PlayerPrefs.SetInt("TutorialEnabled", 0);
-        }
-        else
-        {
-            PlayerPrefs.SetInt("TutorialEnabled", 1);
-        }
-    }
-
 }

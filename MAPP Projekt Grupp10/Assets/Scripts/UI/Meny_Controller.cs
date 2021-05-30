@@ -47,7 +47,7 @@ public class Meny_Controller : MonoBehaviour
     private void PlayClickSound(AudioClip clip)
     {
         audiSource.pitch = Random.Range(0.8f, 1);
-        audiSource.PlayOneShot(clip, 0.5f);
+        audiSource.PlayOneShot(clip);
     }
 
 }

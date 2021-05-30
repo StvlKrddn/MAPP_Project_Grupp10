@@ -9,6 +9,8 @@ public class AudioManager : MonoBehaviour
     
     static System.Random rnd = new System.Random();
 
+    public AudioSource menyAudioMixer; 
+
     void Awake()
     {
         // Ser till att endast en instans av AudioManager finns samtidigt
@@ -29,6 +31,7 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+            s.source.outputAudioMixerGroup = menyAudioMixer.GetComponent<AudioSource>().outputAudioMixerGroup;
         }
     }
 

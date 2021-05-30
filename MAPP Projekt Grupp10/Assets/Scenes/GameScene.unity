@@ -518,7 +518,7 @@ AudioSource:
   m_GameObject: {fileID: 149904807}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 44427895705926550, guid: bf77a9eed05336d458c62a78aea6f91f, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -2559,6 +2559,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &1255025511 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 436374049, guid: e4969d896d301f14b8df32a0c9ca247a, type: 3}
+  m_PrefabInstance: {fileID: 4733783513451549964}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1255500631
 GameObject:
   m_ObjectHideFlags: 0
@@ -3260,7 +3265,7 @@ AudioSource:
   m_GameObject: {fileID: 1501118040}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 44427895705926550, guid: bf77a9eed05336d458c62a78aea6f91f, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -3741,6 +3746,10 @@ PrefabInstance:
       propertyPath: clickSound
       value: 
       objectReference: {fileID: 8300000, guid: 2f108842c410da248ba9f374871d8875, type: 3}
+    - target: {fileID: 5131113898579359067, guid: 522a2286e2996aa41a96c51b534a532b, type: 3}
+      propertyPath: musicController
+      value: 
+      objectReference: {fileID: 5522906523954574920}
     - target: {fileID: 5131113898603581275, guid: 522a2286e2996aa41a96c51b534a532b, type: 3}
       propertyPath: m_Name
       value: CanvasUI
@@ -3849,6 +3858,10 @@ PrefabInstance:
       propertyPath: clickSound
       value: 
       objectReference: {fileID: 8300000, guid: 2f108842c410da248ba9f374871d8875, type: 3}
+    - target: {fileID: 5131113899329214865, guid: 522a2286e2996aa41a96c51b534a532b, type: 3}
+      propertyPath: musicController
+      value: 
+      objectReference: {fileID: 5522906523954574920}
     - target: {fileID: 5131113899329214866, guid: 522a2286e2996aa41a96c51b534a532b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -3993,8 +4006,8 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1883352487}
-        m_TargetAssemblyTypeName: PlayerState, Assembly-CSharp
+      - m_Target: {fileID: 1705945505}
+        m_TargetAssemblyTypeName: UIToggleTutorialButton, Assembly-CSharp
         m_MethodName: ToggleTutorialOn
         m_Mode: 0
         m_Arguments:
@@ -4003,7 +4016,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
   m_IsOn: 1
 --- !u!114 &1705945505
@@ -4358,7 +4371,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 44427895705926550, guid: bf77a9eed05336d458c62a78aea6f91f, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4442,17 +4455,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1883352487 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1883352485, guid: d822c3d5f322a864cb4cf3eb436057cd, type: 3}
-  m_PrefabInstance: {fileID: 1883352483}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1883352484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e1a052f2c9017247bc08d67f79a552c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1883352491 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1883352491, guid: d822c3d5f322a864cb4cf3eb436057cd, type: 3}
@@ -5108,7 +5110,7 @@ AudioSource:
   m_GameObject: {fileID: 2040881235}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 44427895705926550, guid: bf77a9eed05336d458c62a78aea6f91f, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -5523,21 +5525,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 436374049, guid: e4969d896d301f14b8df32a0c9ca247a, type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 436374049, guid: e4969d896d301f14b8df32a0c9ca247a, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 44427895705926550, guid: bf77a9eed05336d458c62a78aea6f91f, type: 2}
     - target: {fileID: 4733783513015508780, guid: e4969d896d301f14b8df32a0c9ca247a, type: 3}
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 4733783513015508781, guid: e4969d896d301f14b8df32a0c9ca247a, type: 3}
+      propertyPath: menyAudioMixer
+      value: 
+      objectReference: {fileID: 1255025511}
+    - target: {fileID: 4733783513015508781, guid: e4969d896d301f14b8df32a0c9ca247a, type: 3}
       propertyPath: sounds.Array.data[0].volume
-      value: 0.02
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733783513015508781, guid: e4969d896d301f14b8df32a0c9ca247a, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4733783513015508781, guid: e4969d896d301f14b8df32a0c9ca247a, type: 3}
       propertyPath: sounds.Array.data[2].volume
-      value: 0.03
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4733783513015508781, guid: e4969d896d301f14b8df32a0c9ca247a, type: 3}
       propertyPath: sounds.Array.data[3].volume
-      value: 0.06
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733783513015508781, guid: e4969d896d301f14b8df32a0c9ca247a, type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4733783513015508782, guid: e4969d896d301f14b8df32a0c9ca247a, type: 3}
       propertyPath: m_RootOrder

@@ -26,7 +26,6 @@ public class PlayerState : MonoBehaviour
     private bool isFading = false;
     private bool isFadingBack = false;
     public bool isGameActive;
-    public bool isTutorialEnabled;
 
     private Color color;
     private Color originalColor;
@@ -71,12 +70,6 @@ public class PlayerState : MonoBehaviour
              tutorialCanvas.GetComponent<UiTutorial>().StartTutorial();
          }*/
 
-        if (isTutorialEnabled == true || PlayerPrefs.GetInt("FirstTimePlaying") == 0)
-        {
-            tutorialCanvas.SetActive(true);
-            tutorialCanvas.GetComponent<UiTutorial>().StartTutorial();
-            PlayerPrefs.SetInt("FirstTimePlaying", 1);
-        }
     }
 
 
@@ -87,13 +80,17 @@ public class PlayerState : MonoBehaviour
 
     public void ResetPlayerPrefs()
     {
+        //PlayerPrefs.DeleteAll();
         PlayerPrefs.SetInt("BananasCollected", 0);
         PlayerPrefs.SetInt("HighScore", 0);
         PlayerPrefs.SetInt("GamesLost", 0);
         PlayerPrefs.SetInt("FirstTimePlaying", 0);
     }
 
+    private void TutorialEnabled()
+    {
 
+    }
 
     public void DamagePlayer(int damage)
     {
@@ -183,8 +180,6 @@ public class PlayerState : MonoBehaviour
         PlayerPrefs.SetInt("BananasCollected", bananasCollected);
         PlayerPrefs.SetInt("GamesLost", PlayerPrefs.GetInt("GamesLost") + 1);
         levelLoader.LoadNextLevel(levelToLoad);
-
-
     }
 
     public void PickupBanana(int bananaAmount)

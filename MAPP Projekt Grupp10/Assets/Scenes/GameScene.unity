@@ -2432,6 +2432,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3731850671055059733, guid: a6b6daf0f823d614ba85a009d3f40a15, type: 3}
   m_PrefabInstance: {fileID: 1405238891}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1092821524 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3731850671055059727, guid: a6b6daf0f823d614ba85a009d3f40a15, type: 3}
+  m_PrefabInstance: {fileID: 1405238891}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092821523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f10dc3131d737043b579f8dcf1c127d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1142545273
 GameObject:
   m_ObjectHideFlags: 0
@@ -2975,6 +2986,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -354
       objectReference: {fileID: 0}
+    - target: {fileID: 3731850670936534068, guid: a6b6daf0f823d614ba85a009d3f40a15, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3731850670936534069, guid: a6b6daf0f823d614ba85a009d3f40a15, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -354
@@ -3073,7 +3088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3731850671055059733, guid: a6b6daf0f823d614ba85a009d3f40a15, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6b6daf0f823d614ba85a009d3f40a15, type: 3}
@@ -4031,6 +4046,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001f99d74dd4d884dafd714c3243a131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiTutorial: {fileID: 1092821524}
+  isTutorialEnabled: 0
 --- !u!1 &1709214644
 GameObject:
   m_ObjectHideFlags: 0
@@ -4171,7 +4188,6 @@ MonoBehaviour:
   amountOfRocksAvailable: 0
   maxAmountOfRocksAvailable: 3
   isGameActive: 0
-  isTutorialEnabled: 0
   levelToLoad: 0
   resetPlayerPrefs: 0
   tutorialCanvas: {fileID: 0}

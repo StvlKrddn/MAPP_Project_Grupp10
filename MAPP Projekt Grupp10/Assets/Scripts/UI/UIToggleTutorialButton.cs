@@ -5,23 +5,31 @@ using UnityEngine.UI;
 
 public class UIToggleTutorialButton : MonoBehaviour
 {
-    private PlayerState playerState;
+    public UiTutorial uiTutorial;
+    public bool isTutorialEnabled;
 
     // Start is called before the first frame update
     void Start()
     {
-
-        playerState = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>();
+        
 
         if (PlayerPrefs.GetInt("TutorialEnabled") == 0)
         {
             gameObject.GetComponent<Toggle>().isOn = true;
-            playerState.isTutorialEnabled = true;
+            isTutorialEnabled = true;
         }
         else {
             gameObject.GetComponent<Toggle>().isOn = false;
-            playerState.isTutorialEnabled = false;
+            isTutorialEnabled = false;
         }
+
+        if (isTutorialEnabled == true || PlayerPrefs.GetInt("FirstTimePlaying") == 0)
+        {
+            uiTutorial.StartTutorial();
+            PlayerPrefs.SetInt("FirstTimePlaying", 1);
+        }
+
+       
 
     }
 
@@ -33,7 +41,7 @@ public class UIToggleTutorialButton : MonoBehaviour
 
     public void ToggleTutorialOn(bool newValue)
     {
-        playerState.isTutorialEnabled = newValue;
+        isTutorialEnabled = newValue;
         if (newValue == true)
         {
             PlayerPrefs.SetInt("TutorialEnabled", 0);

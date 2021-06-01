@@ -47,16 +47,16 @@ public class scr_LevelGenerator : MonoBehaviour
                 
             if(levelPartsList1.Contains(toBeSpawned))
             {
-                print("spawna level part 1");
+                //print("spawna level part 1");
             }
 
             if (levelPartsList2.Contains(toBeSpawned)) 
             {
-                print("spawna level part 2");
+                //print("spawna level part 2");
             }
             if(levelPartsList3.Contains(toBeSpawned))
             {
-                print("spawna level part 3");
+                //print("spawna level part 3");
             }
 
             addLevelPart(toBeSpawned, previousEndPoint);
@@ -70,7 +70,7 @@ public class scr_LevelGenerator : MonoBehaviour
         if(player.GetComponent<Scr_Movement>().baseMovement >= maxMovementSpeed)
         {
             player.GetComponent<Scr_Movement>().baseMovement = maxMovementSpeed;
-            print("max är uppnåd");
+            //print("max är uppnåd");
         }
 
         timeElapsed += 1;
@@ -84,7 +84,7 @@ public class scr_LevelGenerator : MonoBehaviour
         }
         if(timeElapsed < (timeBetweenDifficulty / 5)*2)
         {
-            print(" vilken siffra blir det" + (Random.Range(0, 2)));
+            //print(" vilken siffra blir det" + (Random.Range(0, 2)));
             if (Random.Range(0, 2) == 0)
             {
                 return levelPartsList1[Random.Range(0, levelPartsList1.Count)];

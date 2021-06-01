@@ -18,9 +18,9 @@ public class PickupHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") == true && canPickUpHealth == true && collision.GetComponent<PlayerState>().getCurrentHealth() < collision.GetComponent<PlayerState>().getMaxHealth())
+        if (collision.CompareTag("Player") == true && canPickUpHealth == true && collision.GetComponent<PlayerState>().GetCurrentHealth() < collision.GetComponent<PlayerState>().GetMaxHealth())
         {
-            collision.GetComponent<PlayerState>().healPlayer(amountHealed);
+            collision.GetComponent<PlayerState>().HealPlayer(amountHealed);
             canPickUpHealth = false;
             Instantiate(healthParticles, transform.position, healthParticles.transform.rotation);
             gameObject.GetComponent<SpriteRenderer>().enabled = false;

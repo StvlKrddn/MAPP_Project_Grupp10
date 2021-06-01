@@ -25,8 +25,8 @@ public class EnemyHarmful : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && hasDamagedPlayer == false)
         {
             hasDamagedPlayer = true;
-            collision.gameObject.GetComponent<PlayerState>().damagePlayer(damage);
-            collision.GetComponent<PlayerState>().invinciblePlayer();
+            collision.gameObject.GetComponent<PlayerState>().DamagePlayer(damage);
+            collision.GetComponent<PlayerState>().InvinciblePlayer();
             if (enemyAnimator != null)
             {
                 enemyAnimator.SetTrigger("IsDestroyed");

@@ -12,6 +12,7 @@ public class ButtonResumeGame : MonoBehaviour
     [SerializeField] private Animator canvasAnimator;
     public AudioClip clickSound;
     private AudioSource audioSource;
+    public AudioSource musicController;
 
     private void Start()
     {
@@ -31,7 +32,7 @@ public class ButtonResumeGame : MonoBehaviour
     public void PlayClickSound()
     {
         audioSource.pitch = Random.Range(0.8f, 1);
-        audioSource.PlayOneShot(clickSound, 0.5f);
+        audioSource.PlayOneShot(clickSound);
     }
 
     public void HideMenu()
@@ -45,6 +46,7 @@ public class ButtonResumeGame : MonoBehaviour
         canvasAnimator.SetTrigger("Close");
         yield return new WaitForSecondsRealtime(1);
         Time.timeScale = 1;
+        musicController.UnPause();
         pauseButton.interactable = true;
     }
 

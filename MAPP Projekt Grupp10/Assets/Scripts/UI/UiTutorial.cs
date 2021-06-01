@@ -22,6 +22,7 @@ public class UiTutorial : MonoBehaviour
 
     IEnumerator TutorialAnimation()
     {
+        jumpTutorial.SetActive(true);
         tutorialAnimator.SetTrigger("JumpTutorial");
         yield return new WaitForSeconds(animationTime);
         tutorialAnimator.SetTrigger("ThrowTutorial");
